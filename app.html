@@ -10,7 +10,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" href="icon-192.png">
-<title>VEILLE · à lire</title>
+<title>VEILLE</title>
 <style>
 :root {
   --encre: #131417;
@@ -22,36 +22,44 @@
   --hairline: #dfdeda;
   --ok: #2e7d4f;
   --non: #8a2b1d;
+  --sans: "Avenir Next", "Avenir", -apple-system, "Segoe UI", sans-serif;
+  --serif: "Charter", "Bitstream Charter", "Georgia", serif;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { background: #e9e6e0; }
 body {
   background: var(--papier);
   color: var(--encre);
-  font-family: "Charter", "Bitstream Charter", "Georgia", serif;
+  font-family: var(--serif);
   max-width: 680px;
   margin: 0 auto;
   min-height: 100vh;
+  min-height: 100dvh;
   box-shadow: 0 0 34px rgba(20, 20, 20, 0.13);
-  padding: 20px 18px calc(40px + env(safe-area-inset-bottom)) 18px;
+  display: flex;
+  flex-direction: column;
 }
-header { text-align: center; margin-bottom: 14px; }
-header h1 {
+.sans { font-family: var(--sans); }
+
+/* ------------------------------------------------ entête + onglets */
+#haut { padding: 14px 18px 0 18px; }
+#haut h1 {
   font-weight: 900;
-  font-size: 40px;
+  font-size: 30px;
   letter-spacing: 0.02em;
+  text-align: center;
   border-bottom: 3px solid var(--encre);
-  padding-bottom: 8px;
+  padding-bottom: 6px;
 }
-.tabs { display: flex; gap: 8px; margin: 14px 0 6px 0; }
+.tabs { display: flex; gap: 8px; margin-top: 10px; }
 .tab {
   flex: 1;
-  font-family: "Avenir Next", "Avenir", -apple-system, "Segoe UI", sans-serif;
-  font-size: 12px;
+  font-family: var(--sans);
+  font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 10px 0;
+  padding: 9px 0;
   text-align: center;
   background: var(--accent-pale);
   color: var(--accent-sombre);
@@ -60,230 +68,550 @@ header h1 {
 }
 .tab.actif { background: var(--accent); color: #fff; }
 .compteur { font-weight: 400; opacity: 0.8; }
-#liste { display: flex; flex-direction: column; gap: 14px; margin-top: 12px; }
-.groupe-titre {
-  font-family: "Avenir Next", "Avenir", -apple-system, sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gris);
-  margin: 10px 0 0 0;
-  padding-top: 12px;
-  border-top: 1px solid var(--hairline);
+
+/* ------------------------------------------------ vue tri (deck) */
+#tri { flex: 1; display: flex; flex-direction: column; padding: 16px 18px 20px 18px; }
+#carte-zone { flex: 1; display: flex; align-items: center; position: relative; }
+.deck-carte {
+  width: 100%;
+  background: var(--accent-pale);
+  border-top: 4px solid var(--accent);
+  padding: 22px 20px 24px 20px;
+  touch-action: pan-y;
+  position: relative;
+  transition: transform 0.18s ease, opacity 0.18s ease;
 }
-.carte { background: var(--accent-pale); border-top: 3px solid var(--accent); padding: 14px 16px; }
-.carte.archivee { opacity: 0.75; border-top-color: var(--hairline); }
-.entete-carte { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
-.domaine {
-  font-family: "Avenir Next", "Avenir", -apple-system, sans-serif;
-  font-size: 10px;
+.deck-carte .domaine {
+  font-family: var(--sans);
+  font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #fff;
   background: var(--encre);
   display: inline-block;
-  padding: 3px 8px;
+  padding: 3px 9px;
+  margin-bottom: 12px;
+}
+.deck-carte h2 { font-size: 24px; font-weight: 900; line-height: 1.18; margin-bottom: 10px; }
+.deck-carte .accroche {
+  font-family: var(--sans);
+  font-size: 14.5px;
+  color: var(--gris);
+  line-height: 1.55;
+}
+.indice {
+  position: absolute;
+  top: 14px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  opacity: 0;
+  pointer-events: none;
+}
+.indice.gauche { right: 14px; color: var(--non); border: 2px solid var(--non); }
+.indice.droite { left: 14px; color: var(--accent); border: 2px solid var(--accent); }
+#progression {
+  font-family: var(--sans);
+  font-size: 11.5px;
+  color: var(--gris);
+  text-align: center;
+  margin: 12px 0 10px 0;
+}
+#tri .actions { display: flex; flex-direction: column; gap: 8px; }
+.btn {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+  border: 1.5px solid var(--hairline);
+  background: var(--papier);
+  color: var(--encre);
+  padding: 13px 12px;
+  cursor: pointer;
+  border-radius: 0;
+  text-align: center;
+  text-decoration: none;
+}
+.btn.primaire { background: var(--accent); border-color: var(--accent); color: #fff; }
+.rangee { display: flex; gap: 8px; }
+.rangee .btn { flex: 1; }
+.btn.rouge { color: var(--non); border-color: var(--non); }
+.btn.vert { color: var(--ok); border-color: var(--ok); }
+.vide { text-align: center; color: var(--gris); font-style: italic; padding: 60px 20px; flex: 1; }
+
+/* ------------------------------------------------ vue lecture */
+#lecture { display: none; flex: 1; flex-direction: column; min-height: 0; }
+#lecture-barre {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--hairline);
+  background: var(--papier);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+#retour {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-sombre);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 8px;
+}
+#lecture-domaine {
+  font-family: var(--sans);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gris);
+}
+#contenu { flex: 1; overflow-y: auto; padding: 18px 20px 26px 20px; -webkit-overflow-scrolling: touch; }
+#lecture-pied {
+  display: flex;
+  gap: 8px;
+  padding: 10px 14px calc(10px + env(safe-area-inset-bottom)) 14px;
+  border-top: 1px solid var(--hairline);
+  background: var(--papier);
+}
+#lecture-pied .btn { padding: 11px 10px; font-size: 13.5px; }
+#lecture-pied .vote { flex: 0 0 56px; font-size: 17px; }
+#lecture-pied .fini { flex: 1; }
+.vote.on-plus { background: var(--accent); border-color: var(--accent); color: #fff; }
+.vote.on-moins { background: var(--non); border-color: var(--non); color: #fff; }
+
+/* ---- styles éditoriaux du fragment d'article (repris de la revue) ---- */
+#contenu .surtitre { font-size: 0; margin-bottom: 10px; }
+#contenu .surtitre-label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--encre);
+  padding: 4px 10px;
+}
+#contenu h1 {
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.16;
+  border-top: 3px solid var(--encre);
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+#contenu h1 strong { color: var(--accent); }
+#contenu .chapeau {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--gris);
+  border-left: 3px solid var(--accent);
+  padding-left: 12px;
+  margin-bottom: 16px;
+}
+#contenu .corps p { margin-bottom: 12px; line-height: 1.62; font-size: 16px; }
+#contenu .corps .lettrine {
+  font-weight: 900;
+  font-size: 44px;
+  color: var(--accent);
+  float: left;
+  line-height: 0.85;
+  padding: 3px 6px 0 0;
+}
+#contenu .corps strong { font-weight: 700; }
+#contenu .corps u { text-decoration: none; border-bottom: 2px solid var(--accent); }
+#contenu sup.ast { color: var(--accent); font-weight: 700; }
+#contenu .corps .exergue {
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.45;
+  border-left: 4px solid var(--accent);
+  padding: 2px 0 2px 14px;
+  margin: 18px 0 18px 4px;
+}
+#contenu .corps blockquote {
+  background: var(--accent-pale);
+  border-left: 4px solid var(--accent);
+  padding: 12px 14px;
+  margin: 14px 0;
+}
+#contenu .corps blockquote p {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin-bottom: 6px;
+}
+#contenu .corps blockquote p:last-child { margin-bottom: 0; }
+#contenu .corps blockquote strong { color: var(--accent-sombre); border-bottom: none; }
+#contenu figure { margin: 16px 0; }
+#contenu figure img { width: 100%; display: block; }
+#contenu figcaption {
+  font-family: var(--sans);
+  font-size: 11.5px;
+  color: var(--gris);
+  margin-top: 6px;
+  padding-top: 5px;
+  border-top: 2px solid var(--accent);
+  line-height: 1.5;
+}
+#contenu figure.fig-petite { float: right; width: 46%; margin: 4px 0 10px 12px; }
+#contenu figure.fig-moyenne { width: 70%; margin-left: auto; margin-right: auto; }
+#contenu .corps h2 {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent-sombre);
+  margin: 18px 0 8px 0;
+}
+#contenu .breve { margin-bottom: 14px; }
+#contenu .breve h3 {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+#contenu .breve h3::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  margin-right: 7px;
+}
+#contenu .breve p { font-size: 14.5px; line-height: 1.55; margin-bottom: 6px; }
+#contenu .lexique { clear: both; margin-top: 18px; padding-top: 10px; border-top: 2px solid var(--encre); }
+#contenu .lex-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+#contenu .lex-label::after { content: " ✳"; }
+#contenu .lex-item {
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.55;
+  color: #3a3b40;
+  margin-bottom: 6px;
+  padding-left: 10px;
+}
+#contenu .lex-item strong { color: var(--accent-sombre); }
+#contenu .sources {
+  clear: both;
+  margin-top: 16px;
+  font-family: var(--sans);
+  font-size: 11.5px;
+  color: var(--gris);
+}
+#contenu .sources a { color: var(--accent-sombre); }
+
+/* ------------------------------------------------ vue archives */
+#archives { display: none; flex: 1; padding: 14px 18px 24px 18px; overflow-y: auto; }
+.liste-carte {
+  background: var(--accent-pale);
+  border-top: 3px solid var(--hairline);
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
+.liste-carte .entete { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+.liste-carte .domaine {
+  font-family: var(--sans);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--encre);
+  padding: 2px 7px;
 }
 .etat {
-  font-family: "Avenir Next", "Avenir", -apple-system, sans-serif;
-  font-size: 10px;
+  font-family: var(--sans);
+  font-size: 9.5px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 3px 8px;
+  padding: 2px 7px;
   color: #fff;
 }
 .etat.lu { background: var(--ok); }
 .etat.passe { background: var(--non); }
-.carte h2 { font-size: 18px; font-weight: 900; line-height: 1.22; margin-bottom: 6px; }
-.carte h2 a { color: inherit; text-decoration: none; }
-.accroche {
-  font-family: "Avenir Next", "Avenir", -apple-system, sans-serif;
-  font-size: 13px;
-  color: var(--gris);
-  line-height: 1.5;
-  margin-bottom: 10px;
+.liste-carte h3 { font-size: 15.5px; font-weight: 900; line-height: 1.25; margin-bottom: 8px; }
+.liste-carte .mini { display: flex; gap: 6px; }
+.liste-carte .mini .btn { padding: 6px 10px; font-size: 12px; font-weight: 600; }
+
+/* ------------------------------------------------ pied bilan */
+#pied-bilan {
+  padding: 10px 18px calc(16px + env(safe-area-inset-bottom)) 18px;
+  text-align: center;
 }
-.actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-.btn {
-  font-family: "Avenir Next", "Avenir", -apple-system, sans-serif;
-  font-size: 12.5px;
-  font-weight: 600;
-  border: 1.5px solid var(--hairline);
-  background: var(--papier);
-  color: var(--encre);
-  padding: 7px 12px;
-  cursor: pointer;
-  border-radius: 0;
-  text-decoration: none;
-}
-.btn.lire { border-color: var(--accent); background: var(--accent); color: #fff; }
-.btn.passer { color: var(--non); }
-.btn.vote.on-plus { background: var(--accent); border-color: var(--accent); color: #fff; }
-.btn.vote.on-moins { background: var(--non); border-color: var(--non); color: #fff; }
-.vide { text-align: center; color: var(--gris); font-style: italic; padding: 40px 0; }
-footer { margin-top: 28px; text-align: center; }
-.pied-actions { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
-.pied-actions .btn { border-color: var(--accent); color: var(--accent-sombre); }
-#bilan-zone {
-  width: 100%;
-  margin-top: 10px;
-  font-family: "Menlo", monospace;
-  font-size: 11px;
-  min-height: 120px;
-  display: none;
-  padding: 8px;
-  border: 1px solid var(--hairline);
-}
-.note {
-  font-family: "Avenir Next", "Avenir", -apple-system, sans-serif;
-  font-size: 11px;
-  color: var(--gris);
-  margin-top: 10px;
-}
+#pied-bilan .btn { font-size: 12px; padding: 8px 14px; border-color: var(--accent); color: var(--accent-sombre); }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .deck-carte { transition: none; } }
 </style>
 </head>
 <body>
-<header>
+<div id="haut">
   <h1>VEILLE</h1>
-</header>
-<div class="tabs" role="tablist">
-  <button class="tab actif" id="tab-alire" onclick="bascule('alire')">À lire <span class="compteur" id="c-alire"></span></button>
-  <button class="tab" id="tab-archives" onclick="bascule('archives')">Archives <span class="compteur" id="c-archives"></span></button>
-</div>
-<div id="liste"></div>
-<footer>
-  <div class="pied-actions">
-    <button class="btn" onclick="envoyerGitHub()">Envoyer le bilan à Claude</button>
-    <button class="btn" onclick="copierBilan()">Copier</button>
+  <div class="tabs" role="tablist">
+    <button class="tab actif" id="tab-tri" onclick="bascule('tri')">À trier <span class="compteur" id="c-tri"></span></button>
+    <button class="tab" id="tab-archives" onclick="bascule('archives')">Archives <span class="compteur" id="c-archives"></span></button>
   </div>
-  <textarea id="bilan-zone" readonly aria-label="Bilan de lecture"></textarea>
-  <p class="note">« Envoyer » ouvre GitHub avec le bilan prérempli : un appui sur
-  « Submit » et Claude le récupérera à la prochaine génération. Tout le suivi
-  de lecture reste sinon sur ton appareil.</p>
-</footer>
+</div>
+
+<div id="tri">
+  <div id="carte-zone"></div>
+  <p id="progression"></p>
+  <div class="actions">
+    <button class="btn primaire" onclick="lireCourant()">Lire l'article</button>
+    <div class="rangee">
+      <button class="btn rouge" onclick="passerCourant()">✗ Pas intéressé</button>
+      <button class="btn vert" onclick="luCourant()">✓ Déjà lu</button>
+    </div>
+  </div>
+  <div id="pied-bilan">
+    <button class="btn" onclick="envoyerGitHub()">Envoyer le bilan à Claude</button>
+  </div>
+</div>
+
+<div id="lecture">
+  <div id="lecture-barre">
+    <button id="retour" onclick="fermerLecture()">← Retour</button>
+    <span id="lecture-domaine"></span>
+  </div>
+  <div id="contenu"></div>
+  <div id="lecture-pied">
+    <button class="btn vote" id="v-plus" onclick="voterLecture(1)" aria-label="J'aime">👍</button>
+    <button class="btn vote" id="v-moins" onclick="voterLecture(-1)" aria-label="Je n'aime pas">👎</button>
+    <button class="btn primaire fini" onclick="terminerLecture()">✓ Terminé, suivant</button>
+  </div>
+</div>
+
+<div id="archives"></div>
+
 <script>
 "use strict";
 const LS_READ = "veille.lus", LS_VOTE = "veille.votes", LS_PASS = "veille.passes";
 const REPO = "prodnoland/veille";
-let articles = [], onglet = "alire";
+let articles = [], vue = "tri", enLecture = null;
 const lus = () => JSON.parse(localStorage.getItem(LS_READ) || "{}");
 const votes = () => JSON.parse(localStorage.getItem(LS_VOTE) || "{}");
 const passes = () => JSON.parse(localStorage.getItem(LS_PASS) || "{}");
 const save = (k, o) => localStorage.setItem(k, JSON.stringify(o));
 const jour = () => new Date().toISOString().slice(0, 10);
+const archive = a => (a.id in lus()) || (a.id in passes());
+const restants = () => articles.filter(a => !archive(a));
 
-function marquerLu(id) {
-  const l = lus(); l[id] = jour(); save(LS_READ, l);
-  rendre();
+function courant() { return restants()[0] || null; }
+
+function majCompteurs() {
+  document.getElementById("c-tri").textContent = "(" + restants().length + ")";
+  document.getElementById("c-archives").textContent =
+    "(" + articles.filter(archive).length + ")";
 }
-function passer(id) {
-  const p = passes(); p[id] = jour(); save(LS_PASS, p);
-  rendre();
+
+/* ----------------------------------------------------- vue tri */
+function rendreTri() {
+  majCompteurs();
+  const zone = document.getElementById("carte-zone");
+  const a = courant();
+  const actions = document.querySelector("#tri .actions");
+  if (!a) {
+    zone.innerHTML = '<p class="vide">Tout est trié. Le prochain numéro arrive dimanche.</p>';
+    document.getElementById("progression").textContent = "";
+    actions.style.visibility = "hidden";
+    return;
+  }
+  actions.style.visibility = "visible";
+  zone.innerHTML = `<div class="deck-carte" id="deck">
+    <span class="indice gauche" id="ind-g">✗ passer</span>
+    <span class="indice droite" id="ind-d">lire →</span>
+    <span class="domaine">n°${a.numero} · ${a.domaine}</span>
+    <h2>${a.titre}</h2>
+    <p class="accroche">${a.accroche}</p>
+  </div>`;
+  const idx = articles.filter(x => x.numero === a.numero).indexOf(a);
+  document.getElementById("progression").textContent =
+    `${restants().length} à trier · glisse à droite pour lire, à gauche pour passer`;
+  brancherSwipe(document.getElementById("deck"));
+}
+
+/* balayage façon Tinder : droite = lire, gauche = passer */
+function brancherSwipe(el) {
+  let x0 = null, dx = 0;
+  el.addEventListener("pointerdown", e => { x0 = e.clientX; el.setPointerCapture(e.pointerId); });
+  el.addEventListener("pointermove", e => {
+    if (x0 === null) return;
+    dx = e.clientX - x0;
+    el.style.transform = `translateX(${dx}px) rotate(${dx / 30}deg)`;
+    document.getElementById("ind-g").style.opacity = dx < -30 ? 1 : 0;
+    document.getElementById("ind-d").style.opacity = dx > 30 ? 1 : 0;
+  });
+  const fin = () => {
+    if (x0 === null) return;
+    if (dx < -80) { animerSortie(el, -1, passerCourant); }
+    else if (dx > 80) { el.style.transform = ""; lireCourant(); }
+    else { el.style.transform = ""; }
+    document.getElementById("ind-g").style.opacity = 0;
+    document.getElementById("ind-d").style.opacity = 0;
+    x0 = null; dx = 0;
+  };
+  el.addEventListener("pointerup", fin);
+  el.addEventListener("pointercancel", fin);
+}
+function animerSortie(el, sens, apres) {
+  el.style.transform = `translateX(${sens * 500}px) rotate(${sens * 16}deg)`;
+  el.style.opacity = "0";
+  setTimeout(apres, 160);
+}
+
+function passerCourant() {
+  const a = courant(); if (!a) return;
+  const p = passes(); p[a.id] = jour(); save(LS_PASS, p);
+  rendreTri();
+}
+function luCourant() {
+  const a = courant(); if (!a) return;
+  const l = lus(); l[a.id] = jour(); save(LS_READ, l);
+  rendreTri();
+}
+function lireCourant() {
+  const a = courant(); if (!a) return;
+  ouvrirLecture(a);
+}
+
+/* ----------------------------------------------------- vue lecture */
+function ouvrirLecture(a) {
+  enLecture = a;
+  document.getElementById("haut").style.display = "none";
+  document.getElementById("tri").style.display = "none";
+  document.getElementById("archives").style.display = "none";
+  document.getElementById("lecture").style.display = "flex";
+  document.getElementById("lecture-domaine").textContent =
+    "n°" + a.numero + " · " + a.domaine;
+  majVotesLecture();
+  const zone = document.getElementById("contenu");
+  zone.innerHTML = '<p class="vide">Chargement…</p>';
+  fetch("articles/" + a.id + ".html")
+    .then(r => { if (!r.ok) throw 0; return r.text(); })
+    .then(html => { zone.innerHTML = html; zone.scrollTop = 0; })
+    .catch(() => {
+      zone.innerHTML = `<p class="vide">Article indisponible hors ligne.
+        <a href="${a.url}">L'ouvrir dans le numéro complet</a></p>`;
+    });
+}
+function majVotesLecture() {
+  const v = votes()[enLecture.id] || 0;
+  document.getElementById("v-plus").classList.toggle("on-plus", v === 1);
+  document.getElementById("v-moins").classList.toggle("on-moins", v === -1);
+}
+function voterLecture(val) {
+  const o = votes();
+  o[enLecture.id] = (o[enLecture.id] === val) ? 0 : val;
+  if (!o[enLecture.id]) delete o[enLecture.id];
+  save(LS_VOTE, o);
+  majVotesLecture();
+}
+function terminerLecture() {
+  const l = lus(); l[enLecture.id] = jour(); save(LS_READ, l);
+  fermerLecture();
+}
+function fermerLecture() {
+  enLecture = null;
+  document.getElementById("lecture").style.display = "none";
+  document.getElementById("haut").style.display = "block";
+  bascule(vue);
+}
+
+/* ----------------------------------------------------- vue archives */
+function rendreArchives() {
+  majCompteurs();
+  const zone = document.getElementById("archives");
+  const l = lus(), p = passes();
+  const items = articles.filter(archive);
+  if (!items.length) {
+    zone.innerHTML = '<p class="vide">Rien d’archivé pour l’instant.</p>';
+    return;
+  }
+  zone.innerHTML = items.map(a => {
+    const v = votes()[a.id] || 0;
+    const etat = (a.id in l) ? '<span class="etat lu">✓ lu</span>'
+                             : '<span class="etat passe">✗ passé</span>';
+    const voteTxt = v === 1 ? " · 👍" : v === -1 ? " · 👎" : "";
+    return `<div class="liste-carte">
+      <div class="entete"><span class="domaine">n°${a.numero} · ${a.domaine}</span>${etat}<span class="sans" style="font-size:11px;color:var(--gris)">${voteTxt}</span></div>
+      <h3>${a.titre}</h3>
+      <div class="mini">
+        <button class="btn" onclick="relire('${a.id}')">Relire</button>
+        <button class="btn" onclick="remettre('${a.id}')">↩︎ À trier</button>
+      </div>
+    </div>`;
+  }).join("");
+}
+function relire(id) {
+  const a = articles.find(x => x.id === id);
+  if (a) ouvrirLecture(a);
 }
 function remettre(id) {
   const l = lus(), p = passes();
   delete l[id]; delete p[id];
   save(LS_READ, l); save(LS_PASS, p);
-  rendre();
+  rendreArchives();
 }
-function voter(id, v) {
-  const o = votes();
-  o[id] = (o[id] === v) ? 0 : v;
-  if (!o[id]) delete o[id];
-  save(LS_VOTE, o);
-  rendre();
-}
+
+/* ----------------------------------------------------- navigation */
 function bascule(t) {
-  onglet = t;
-  document.getElementById("tab-alire").classList.toggle("actif", t === "alire");
+  vue = t;
+  document.getElementById("tab-tri").classList.toggle("actif", t === "tri");
   document.getElementById("tab-archives").classList.toggle("actif", t === "archives");
-  rendre();
+  document.getElementById("tri").style.display = t === "tri" ? "flex" : "none";
+  document.getElementById("archives").style.display = t === "archives" ? "block" : "none";
+  if (t === "tri") rendreTri(); else rendreArchives();
 }
-function carte(a) {
-  const estLu = a.id in lus(), estPasse = a.id in passes();
-  const v = votes()[a.id] || 0;
-  const etat = estLu ? '<span class="etat lu">✓ lu</span>'
-             : estPasse ? '<span class="etat passe">✗ passé</span>' : "";
-  const actions = (estLu || estPasse)
-    ? `<button class="btn" onclick="remettre('${a.id}')">↩︎ Remettre à lire</button>
-       <button class="btn vote${v === 1 ? " on-plus" : ""}" onclick="voter('${a.id}', 1)" aria-label="J'aime">👍</button>
-       <button class="btn vote${v === -1 ? " on-moins" : ""}" onclick="voter('${a.id}', -1)" aria-label="Je n'aime pas">👎</button>`
-    : `<a class="btn lire" href="${a.url}">Oui, lire</a>
-       <button class="btn" onclick="marquerLu('${a.id}')">✓ Lu</button>
-       <button class="btn passer" onclick="passer('${a.id}')">✗ Pas intéressé</button>
-       <button class="btn vote${v === 1 ? " on-plus" : ""}" onclick="voter('${a.id}', 1)" aria-label="J'aime">👍</button>
-       <button class="btn vote${v === -1 ? " on-moins" : ""}" onclick="voter('${a.id}', -1)" aria-label="Je n'aime pas">👎</button>`;
-  return `<div class="carte${(estLu || estPasse) ? " archivee" : ""}">
-    <div class="entete-carte"><span class="domaine">${a.domaine}</span>${etat}</div>
-    <h2><a href="${a.url}">${a.titre}</a></h2>
-    <p class="accroche">${a.accroche}</p>
-    <div class="actions">${actions}</div>
-  </div>`;
-}
-function rendre() {
-  const l = lus(), p = passes();
-  const archive = a => (a.id in l) || (a.id in p);
-  const visibles = articles.filter(a => (onglet === "alire") ? !archive(a) : archive(a));
-  document.getElementById("c-alire").textContent =
-    "(" + articles.filter(a => !archive(a)).length + ")";
-  document.getElementById("c-archives").textContent =
-    "(" + articles.filter(archive).length + ")";
-  const zone = document.getElementById("liste");
-  if (!visibles.length) {
-    zone.innerHTML = `<p class="vide">${onglet === "alire"
-      ? "Tout est trié. Le prochain numéro arrive dimanche."
-      : "Rien d'archivé pour l'instant."}</p>`;
-    return;
-  }
-  let html = "", numCourant = null;
-  for (const a of visibles) {
-    if (a.numero !== numCourant) {
-      numCourant = a.numero;
-      html += `<p class="groupe-titre">Numéro ${a.numero} · ${a.date}</p>`;
-    }
-    html += carte(a);
-  }
-  zone.innerHTML = html;
-}
+
+/* ----------------------------------------------------- bilan */
 function texteBilan() {
   const l = lus(), p = passes(), v = votes();
   const nom = id => (articles.find(a => a.id === id) || { titre: id }).titre;
-  const liste = o => Object.keys(o).map(nom);
   const plus = Object.keys(v).filter(k => v[k] === 1).map(nom);
   const moins = Object.keys(v).filter(k => v[k] === -1).map(nom);
   return [
     "Bilan de lecture VEILLE (" + jour() + ")",
     "Lus : " + Object.keys(l).length + " · Passés : " + Object.keys(p).length +
-      " · Restants : " + articles.filter(a => !(a.id in l) && !(a.id in p)).length,
+      " · Restants : " + restants().length,
     plus.length ? "👍 " + plus.join(" | ") : "👍 aucun",
     moins.length ? "👎 " + moins.join(" | ") : "👎 aucun",
-    Object.keys(p).length ? "✗ Passés (pas intéressé) : " + liste(p).join(" | ") : "",
+    Object.keys(p).length ? "✗ Passés (pas intéressé) : " + Object.keys(p).map(nom).join(" | ") : "",
   ].filter(Boolean).join("\n");
 }
 function envoyerGitHub() {
-  const txt = texteBilan();
   const url = "https://github.com/" + REPO + "/issues/new" +
     "?title=" + encodeURIComponent("Bilan de lecture " + jour()) +
-    "&body=" + encodeURIComponent(txt);
+    "&body=" + encodeURIComponent(texteBilan());
   window.open(url, "_blank");
 }
-function copierBilan() {
-  const txt = texteBilan();
-  const zone = document.getElementById("bilan-zone");
-  zone.style.display = "block";
-  zone.value = txt;
-  if (navigator.clipboard) navigator.clipboard.writeText(txt);
-}
+
 fetch("articles.json")
   .then(r => r.json())
-  .then(data => { articles = data; rendre(); })
+  .then(data => { articles = data; rendreTri(); })
   .catch(() => {
-    document.getElementById("liste").innerHTML =
-      '<p class="vide">Impossible de charger le catalogue (articles.json).</p>';
+    document.getElementById("carte-zone").innerHTML =
+      '<p class="vide">Impossible de charger le catalogue.</p>';
   });
 </script>
 </body>
