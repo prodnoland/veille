@@ -1,380 +1,422 @@
 [
  {
-  "id": "n01-actu",
-  "numero": 1,
-  "date": "2026-08-12",
-  "domaine": "Brèves",
-  "titre": "L'actu en bref",
-  "accroche": "",
-  "url": "veille-n01.html#actu"
- },
- {
-  "id": "n01-agents-hors-piste",
-  "numero": 1,
-  "date": "2026-08-12",
-  "domaine": "Intelligence artificielle",
-  "titre": "Des agents d'évaluation ont attaqué de vraies cibles",
-  "accroche": "L'institut britannique de sécurité de l'IA détaille dix-neuf sorties de piste lors de tests de cybersécurité, dont une tentative d'attaque par la chaîne d'approvisionnement contre un dépôt open source. Trois entreprises ont connu des incidents comparables.",
-  "url": "veille-n01.html#agents-hors-piste"
- },
- {
   "id": "n01-apprentissage-un-coup",
   "numero": 1,
   "date": "2026-08-12",
+  "ordre": 0,
   "domaine": "Neurosciences",
   "titre": "Le cerveau garde une porte dérobée pour apprendre en une seule fois",
   "accroche": "Une équipe montre chez la souris que l'apprentissage en un seul essai passe par une voie synaptique différente de celle de l'apprentissage par répétition, gouvernée par les endocannabinoïdes du striatum.",
   "url": "veille-n01.html#apprentissage-un-coup"
  },
  {
-  "id": "n01-breves",
-  "numero": 1,
-  "date": "2026-08-12",
-  "domaine": "Brèves",
-  "titre": "Droit &amp; Argent",
-  "accroche": "",
-  "url": "veille-n01.html#breves"
- },
- {
-  "id": "n01-canicule-electricite",
-  "numero": 1,
-  "date": "2026-08-12",
-  "domaine": "Climat",
-  "titre": "La canicule éteint les centrales au moment où l'on en a besoin",
-  "accroche": "Record d'indisponibilité du parc nucléaire français, trois réacteurs de Gravelines arrêtés par un afflux de méduses, cours d'eau à sec : l'été 2026 illustre la dépendance du système électrique aux conditions qu'il contribue à modifier.",
-  "url": "veille-n01.html#canicule-electricite"
- },
- {
-  "id": "n01-chatouilles",
-  "numero": 1,
-  "date": "2026-08-12",
-  "domaine": "Psychologie & comportement",
-  "titre": "Les chatouilles ont une carte, et elle est la même partout",
-  "accroche": "Chinois, Néerlandais et Grecs partagent les mêmes zones chatouilleuses, et la sensibilité est plus forte là où le corps est rarement touché. De quoi trancher entre plusieurs théories concurrentes.",
-  "url": "veille-n01.html#chatouilles"
- },
- {
-  "id": "n01-chomage-jeunes-ia",
-  "numero": 1,
-  "date": "2026-08-12",
-  "domaine": "Économie",
-  "titre": "Le chômage remonte, et les jeunes encaissent d'abord",
-  "accroche": "L'Insee mesure un taux de chômage à 8,3 % au deuxième trimestre, avec 21,2 % chez les moins de 25 ans. La même bosse s'observe dans plusieurs pays, et le soupçon se porte sur les emplois d'entrée que l'IA absorbe.",
-  "url": "veille-n01.html#chomage-jeunes-ia"
- },
- {
-  "id": "n01-ea-pif",
-  "numero": 1,
-  "date": "2026-08-12",
-  "domaine": "Culture & industries créatives",
-  "titre": "Electronic Arts change de mains pour 55 milliards de dollars",
-  "accroche": "Le fonds souverain saoudien, associé au fonds de Jared Kushner, a bouclé le rachat d'EA et sorti l'éditeur de la Bourse. Le montage repose sur la dette, dans une industrie qui licencie depuis trois ans.",
-  "url": "veille-n01.html#ea-pif"
- },
- {
-  "id": "n01-eclipse-12-aout",
-  "numero": 1,
-  "date": "2026-08-12",
-  "domaine": "Espace & Physique",
-  "titre": "Ce midi, l'Europe passe dans l'ombre de la Lune",
-  "accroche": "La seule éclipse totale de l'année traverse le Groenland, l'Islande, le nord du Portugal et l'Espagne. C'est la première totalité sur l'Espagne continentale depuis 1905, et une fenêtre de quelques minutes pour les physiciens du Soleil.",
-  "url": "veille-n01.html#eclipse-12-aout"
- },
- {
-  "id": "n01-faille-cdj",
-  "numero": 1,
-  "date": "2026-08-12",
-  "domaine": "Post-prod & Musique",
-  "titre": "Une faille de sécurité dans les platines CDJ et Rekordbox",
-  "accroche": "AlphaTheta, ex-Pioneer DJ, signale une vulnérabilité touchant de nombreux modèles CDJ et XDJ ainsi que toutes les versions de Rekordbox. Le risque ne concerne que les machines connectées à un réseau.",
-  "url": "veille-n01.html#faille-cdj"
- },
- {
-  "id": "n01-filrouge",
-  "numero": 1,
-  "date": "2026-08-12",
-  "domaine": "Fil rouge",
-  "titre": "Prévoir le ciel a toujours été une affaire de pouvoir",
-  "accroche": "",
-  "url": "veille-n01.html#filrouge"
- },
- {
-  "id": "n01-glueball",
-  "numero": 1,
-  "date": "2026-08-12",
-  "domaine": "Espace & Physique",
-  "titre": "La boule de glue, une particule faite de pure force",
-  "accroche": "Après quinze ans d'analyse, la collaboration BESIII conclut que la particule X(2370) est dominée par un état de gluons purs. Une prédiction vieille d'un demi-siècle trouve enfin son objet.",
-  "url": "veille-n01.html#glueball"
- },
- {
   "id": "n01-microglie-alzheimer",
   "numero": 1,
   "date": "2026-08-12",
+  "ordre": 1,
   "domaine": "Neurosciences",
   "titre": "Alzheimer : les cellules immunitaires du cerveau changent de statut",
   "accroche": "En cartographiant 830 000 cellules immunitaires cérébrales, des chercheurs identifient une population de microglies protectrices qui augmente avec la maladie. Une autre étude montre que le sang vient renouveler ces cellules dans le cerveau âgé.",
   "url": "veille-n01.html#microglie-alzheimer"
  },
  {
-  "id": "n01-pacte-la-mecque",
+  "id": "n01-eclipse-12-aout",
   "numero": 1,
   "date": "2026-08-12",
-  "domaine": "Géopolitique, Sécurité & Défense",
-  "titre": "Le pacte de La Mecque rebat les cartes de l'Asie du Sud",
-  "accroche": "Le Pakistan, l'Arabie saoudite et la Turquie ont signé le 7 août un engagement de défense mutuelle. L'accord adosse la puissance financière saoudienne à l'armée pakistanaise, seule force nucléaire du monde musulman, et fragilise l'Inde.",
-  "url": "veille-n01.html#pacte-la-mecque"
+  "ordre": 2,
+  "domaine": "Espace & Physique",
+  "titre": "Ce midi, l'Europe passe dans l'ombre de la Lune",
+  "accroche": "La seule éclipse totale de l'année traverse le Groenland, l'Islande, le nord du Portugal et l'Espagne. C'est la première totalité sur l'Espagne continentale depuis 1905, et une fenêtre de quelques minutes pour les physiciens du Soleil.",
+  "url": "veille-n01.html#eclipse-12-aout"
  },
  {
-  "id": "n01-riemann-deux-tiers",
+  "id": "n01-glueball",
   "numero": 1,
   "date": "2026-08-12",
-  "domaine": "Intelligence artificielle",
-  "titre": "Des agents revendiquent une avancée sur l'hypothèse de Riemann",
-  "accroche": "Anthropic publie un argument, obtenu par deux exécutions d'agents, portant à plus des deux tiers la proportion démontrée de zéros de la fonction zêta situés sur la ligne critique. Le précédent record tenait depuis 1989.",
-  "url": "veille-n01.html#riemann-deux-tiers"
+  "ordre": 3,
+  "domaine": "Espace & Physique",
+  "titre": "La boule de glue, une particule faite de pure force",
+  "accroche": "Après quinze ans d'analyse, la collaboration BESIII conclut que la particule X(2370) est dominée par un état de gluons purs. Une prédiction vieille d'un demi-siècle trouve enfin son objet.",
+  "url": "veille-n01.html#glueball"
+ },
+ {
+  "id": "n01-ea-pif",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 4,
+  "domaine": "Culture & industries créatives",
+  "titre": "Electronic Arts change de mains pour 55 milliards de dollars",
+  "accroche": "Le fonds souverain saoudien, associé au fonds de Jared Kushner, a bouclé le rachat d'EA et sorti l'éditeur de la Bourse. Le montage repose sur la dette, dans une industrie qui licencie depuis trois ans.",
+  "url": "veille-n01.html#ea-pif"
  },
  {
   "id": "n01-suno-spotify",
   "numero": 1,
   "date": "2026-08-12",
+  "ordre": 5,
   "domaine": "Culture & industries créatives",
   "titre": "La musique générée cherche sa respectabilité",
   "accroche": "Suno signe avec BMG, limite les téléchargements et prépare des filigranes ; Spotify étiquette les artistes artificiels et les retire de ses recommandations par défaut. L'industrie passe du procès au contrat.",
   "url": "veille-n01.html#suno-spotify"
  },
  {
-  "id": "n01-trebuchet",
-  "numero": 1,
-  "date": "2026-08-12",
-  "domaine": "Histoire",
-  "titre": "Un squelette écossais, première victime avérée d'un trébuchet",
-  "accroche": "Les restes d'un combattant du XIVe siècle retrouvés dans un château d'Écosse portent des traces de destruction si étendues qu'elles ne s'expliquent que par l'impact d'un bloc de pierre lancé par une machine de siège.",
-  "url": "veille-n01.html#trebuchet"
- },
- {
-  "id": "n01-virus-dormants",
-  "numero": 1,
-  "date": "2026-08-12",
-  "domaine": "Médecine",
-  "titre": "Le Covid réveille les virus dormants que nous hébergeons",
-  "accroche": "Une étude parue dans Nature montre que l'infection réactive durablement herpèsvirus et anellovirus, et que cette réactivation suit la sévérité de la maladie comme le risque de Covid long.",
-  "url": "veille-n01.html#virus-dormants"
- },
- {
   "id": "n01-vst-30-ans",
   "numero": 1,
   "date": "2026-08-12",
+  "ordre": 6,
   "domaine": "Post-prod & Musique",
   "titre": "Trente ans de VST, et une pluie de plugins gratuits",
   "accroche": "Steinberg fête l'anniversaire du format qui a fait entrer le studio dans l'ordinateur en offrant ses instruments historiques. La semaine est par ailleurs généreuse en outils gratuits sérieux.",
   "url": "veille-n01.html#vst-30-ans"
  },
  {
-  "id": "n00-3i-atlas",
-  "numero": 0,
+  "id": "n01-faille-cdj",
+  "numero": 1,
   "date": "2026-08-12",
-  "domaine": "Espace & Physique",
-  "titre": "La visiteuse plus vieille que le Soleil",
-  "accroche": "La comète 3I/ATLAS, troisième objet interstellaire jamais détecté, traverse notre système solaire. Sa chimie ne ressemble à rien de connu, et son âge estimé donne le vertige : elle serait née jusqu'à 12 milliards d'années en arrière, avant même notre étoile.",
-  "url": "veille-n00.html#3i-atlas"
- },
- {
-  "id": "n00-adn-ancien",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Histoire",
-  "titre": "L'ADN ancien a réécrit trois histoires cette année",
-  "accroche": "Un troisième peuple fondateur du Japon, une population de bâtisseurs de mégalithes remplacée sans laisser d'héritiers, et la trace des Dénisoviens toujours active dans nos corps : la paléogénétique transforme l'archéologie en science des populations.",
-  "url": "veille-n00.html#adn-ancien"
- },
- {
-  "id": "n00-amoc",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Climat",
-  "titre": "L'océan qu'on cesse de surveiller au pire moment",
-  "accroche": "Le grand courant atlantique qui tempère le climat européen montre des signes de fragilité, et une étude de juin suggère qu'un effondrement bouleverserait le climat dix fois plus vite qu'estimé. Pendant ce temps, le réseau qui le surveille perd ses financements les uns après les autres.",
-  "url": "veille-n00.html#amoc"
- },
- {
-  "id": "n00-attribution",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Climat",
-  "titre": "Des canicules avec des noms de sociétés",
-  "accroche": "L'Europe a battu ses records de chaleur de mai puis de juin, sur fond de troisième début d'année le plus chaud jamais mesuré. Et la science sait désormais chiffrer la responsabilité de chaque grand émetteur dans une canicule donnée. Les juristes ont pris note.",
-  "url": "veille-n00.html#attribution"
- },
- {
-  "id": "n00-breves",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Brèves",
-  "titre": "Droit &amp; Argent : ce que 2026 a changé",
-  "accroche": "",
-  "url": "veille-n00.html#breves"
- },
- {
-  "id": "n00-car-t",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Médecine",
-  "titre": "Le médicament vivant fabriqué en usine",
-  "accroche": "Les cellules CAR-T ont révolutionné le traitement des cancers du sang, mais chaque dose devait être fabriquée sur mesure à partir des cellules du patient. En 2026, les versions « sur étagère », éditées par CRISPR, font leurs preuves. Le médicament vivant devient un produit standardisé.",
-  "url": "veille-n00.html#car-t"
- },
- {
-  "id": "n00-cerveau-hd",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Neurosciences",
-  "titre": "Le cerveau passe en haute résolution",
-  "accroche": "Trois avancées de l'année racontent la même histoire : on ne regarde plus le cerveau à la jumelle, on le cartographie neurone par neurone, et on commence à intervenir en temps réel.",
-  "url": "veille-n00.html#cerveau-hd"
- },
- {
-  "id": "n00-chrono",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Brèves",
-  "titre": "2026 en huit dates",
-  "accroche": "",
-  "url": "veille-n00.html#chrono"
- },
- {
-  "id": "n00-essais-adaptatifs",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Médecine",
-  "titre": "L'essai clinique qui apprend en marchant",
-  "accroche": "Pour les tumeurs cérébrales, un essai d'un genre nouveau vient d'ouvrir : une plateforme mondiale où chaque patient reçoit le traitement correspondant à la génétique de sa tumeur, et où les bras de l'essai s'ouvrent et se ferment selon les résultats.",
-  "url": "veille-n00.html#essais-adaptatifs"
- },
- {
-  "id": "n00-exoplanetes",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Espace & Physique",
-  "titre": "L'année où les exoplanètes ont cassé les modèles",
-  "accroche": "Une planète en forme de citron, un monde dont l'atmosphère sent le soufre, une géante restée cachée dans le système le plus scruté du ciel : le télescope James Webb a enchaîné les découvertes qui obligent à réécrire les manuels.",
-  "url": "veille-n00.html#exoplanetes"
- },
- {
-  "id": "n00-filrouge",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Fil rouge",
-  "titre": "La confiance se mesure",
-  "accroche": "",
-  "url": "veille-n00.html#filrouge"
- },
- {
-  "id": "n00-gta-vi",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Culture & industries créatives",
-  "titre": "GTA VI, l'événement économique déguisé en jeu vidéo",
-  "accroche": "Cinq milliards de dollars attendus la première semaine : le lancement de Grand Theft Auto VI, prévu le 19 novembre, serait le plus gros de l'histoire du divertissement, tous médias confondus. Toute une industrie a réorganisé son calendrier pour ne pas se trouver sur sa trajectoire.",
-  "url": "veille-n00.html#gta-vi"
- },
- {
-  "id": "n00-ia-doute",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Intelligence artificielle",
-  "titre": "Apprendre aux machines à dire « je ne sais pas »",
-  "accroche": "Le talon d'Achille des modèles de langage n'est pas leur ignorance, c'est leur aplomb. En 2026, la calibration de l'incertitude est devenue un front de recherche central, et les premiers résultats changent la manière d'utiliser ces systèmes.",
-  "url": "veille-n00.html#ia-doute"
- },
- {
-  "id": "n00-ia-infrastructure",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Intelligence artificielle",
-  "titre": "L'IA devient une infrastructure",
-  "accroche": "Agents qui travaillent seuls, modèles géants et modèles frugaux, open source qui rattrape par l'entraînement final, premiers déploiements d'État : huit mois qui ont fait passer l'IA du statut de produit à celui d'équipement de base.",
-  "url": "veille-n00.html#ia-infrastructure"
- },
- {
-  "id": "n00-inflation",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Économie",
-  "titre": "L'inflation revenue par le pétrole, les marchés au sommet quand même",
-  "accroche": "La guerre au Moyen-Orient a renchéri le brut, l'inflation est remontée à des plus hauts pluriannuels, et la banque centrale américaine a suspendu ses baisses de taux. Pourtant les Bourses alignent les records. Le paradoxe s'explique.",
-  "url": "veille-n00.html#inflation"
- },
- {
-  "id": "n00-karyoptose",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Neurosciences",
-  "titre": "Karyoptose : on a trouvé comment meurent les neurones",
-  "accroche": "Depuis quarante ans, on sait que des protéines toxiques s'accumulent dans Alzheimer et la démence fronto-temporale. Mais comment tuent-elles la cellule ? Une équipe londonienne vient d'identifier le mécanisme, et c'est une forme de mort cellulaire inconnue.",
-  "url": "veille-n00.html#karyoptose"
- },
- {
-  "id": "n00-multifronts",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Géopolitique, Sécurité & Défense",
-  "titre": "Un monde à plusieurs fronts",
-  "accroche": "Au-delà du Venezuela, le premier semestre a superposé les théâtres : escalade autour de l'Iran, guerre d'usure en Ukraine, poudrière au Cachemire et dans les Grands Lacs africains. Tour d'horizon de ce qui structure l'année, froidement.",
-  "url": "veille-n00.html#multifronts"
- },
- {
-  "id": "n00-musique-ia",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Culture & industries créatives",
-  "titre": "Musique et IA : la guerre est finie, les ennuis commencent",
-  "accroche": "Les majors ont réglé une partie de leurs procès contre les générateurs de musique Suno et Udio : licences, anciens modèles supprimés, catalogues sous contrat. Mais les accords ont ouvert un conflit inattendu : les musiciens attaquent maintenant leurs propres maisons de disques.",
-  "url": "veille-n00.html#musique-ia"
- },
- {
-  "id": "n00-replication",
-  "numero": 0,
-  "date": "2026-08-12",
-  "domaine": "Psychologie",
-  "titre": "La moitié de la science sociale ne se réplique pas",
-  "accroche": "Le plus grand audit jamais mené sur les sciences humaines a rendu son verdict dans Nature en avril : environ un résultat publié sur deux résiste à la revérification. Ce n'est pas la fin de la science, c'est son mode d'emploi.",
-  "url": "veille-n00.html#replication"
- },
- {
-  "id": "n00-studio-ip",
-  "numero": 0,
-  "date": "2026-08-12",
+  "ordre": 7,
   "domaine": "Post-prod & Musique",
-  "titre": "Le studio quitte le câble vidéo pour le réseau",
-  "accroche": "Derrière l'avalanche d'annonces Blackmagic du printemps (Resolve 21, consoles Fairlight, commutateurs réseau), une bascule discrète : la vidéo professionnelle abandonne son câblage historique pour l'informatique en réseau. Le studio devient un data center.",
-  "url": "veille-n00.html#studio-ip"
+  "titre": "Une faille de sécurité dans les platines CDJ et Rekordbox",
+  "accroche": "AlphaTheta, ex-Pioneer DJ, signale une vulnérabilité touchant de nombreux modèles CDJ et XDJ ainsi que toutes les versions de Rekordbox. Le risque ne concerne que les machines connectées à un réseau.",
+  "url": "veille-n01.html#faille-cdj"
  },
  {
-  "id": "n00-thc-ptsd",
-  "numero": 0,
+  "id": "n01-riemann-deux-tiers",
+  "numero": 1,
   "date": "2026-08-12",
-  "domaine": "Psychologie",
-  "titre": "Du THC contre les cauchemars traumatiques",
-  "accroche": "Dans un essai contrôlé allemand publié dans Nature, un tiers des patients PTSD sous dronabinol ont vu leurs cauchemars disparaître complètement en dix semaines. Un espoir sérieux pour un symptôme qui résiste à presque tout.",
-  "url": "veille-n00.html#thc-ptsd"
+  "ordre": 8,
+  "domaine": "Intelligence artificielle",
+  "titre": "Des agents revendiquent une avancée sur l'hypothèse de Riemann",
+  "accroche": "Anthropic publie un argument, obtenu par deux exécutions d'agents, portant à plus des deux tiers la proportion démontrée de zéros de la fonction zêta situés sur la ligne critique. Le précédent record tenait depuis 1989.",
+  "url": "veille-n01.html#riemann-deux-tiers"
+ },
+ {
+  "id": "n01-agents-hors-piste",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 9,
+  "domaine": "Intelligence artificielle",
+  "titre": "Des agents d'évaluation ont attaqué de vraies cibles",
+  "accroche": "L'institut britannique de sécurité de l'IA détaille dix-neuf sorties de piste lors de tests de cybersécurité, dont une tentative d'attaque par la chaîne d'approvisionnement contre un dépôt open source. Trois entreprises ont connu des incidents comparables.",
+  "url": "veille-n01.html#agents-hors-piste"
+ },
+ {
+  "id": "n01-virus-dormants",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 10,
+  "domaine": "Médecine",
+  "titre": "Le Covid réveille les virus dormants que nous hébergeons",
+  "accroche": "Une étude parue dans Nature montre que l'infection réactive durablement herpèsvirus et anellovirus, et que cette réactivation suit la sévérité de la maladie comme le risque de Covid long.",
+  "url": "veille-n01.html#virus-dormants"
+ },
+ {
+  "id": "n01-chatouilles",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 11,
+  "domaine": "Psychologie & comportement",
+  "titre": "Les chatouilles ont une carte, et elle est la même partout",
+  "accroche": "Chinois, Néerlandais et Grecs partagent les mêmes zones chatouilleuses, et la sensibilité est plus forte là où le corps est rarement touché. De quoi trancher entre plusieurs théories concurrentes.",
+  "url": "veille-n01.html#chatouilles"
+ },
+ {
+  "id": "n01-trebuchet",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 12,
+  "domaine": "Histoire",
+  "titre": "Un squelette écossais, première victime avérée d'un trébuchet",
+  "accroche": "Les restes d'un combattant du XIVe siècle retrouvés dans un château d'Écosse portent des traces de destruction si étendues qu'elles ne s'expliquent que par l'impact d'un bloc de pierre lancé par une machine de siège.",
+  "url": "veille-n01.html#trebuchet"
+ },
+ {
+  "id": "n01-filrouge",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 13,
+  "domaine": "Fil rouge",
+  "titre": "Prévoir le ciel a toujours été une affaire de pouvoir",
+  "accroche": "",
+  "url": "veille-n01.html#filrouge"
+ },
+ {
+  "id": "n01-chomage-jeunes-ia",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 14,
+  "domaine": "Économie",
+  "titre": "Le chômage remonte, et les jeunes encaissent d'abord",
+  "accroche": "L'Insee mesure un taux de chômage à 8,3 % au deuxième trimestre, avec 21,2 % chez les moins de 25 ans. La même bosse s'observe dans plusieurs pays, et le soupçon se porte sur les emplois d'entrée que l'IA absorbe.",
+  "url": "veille-n01.html#chomage-jeunes-ia"
+ },
+ {
+  "id": "n01-canicule-electricite",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 15,
+  "domaine": "Climat",
+  "titre": "La canicule éteint les centrales au moment où l'on en a besoin",
+  "accroche": "Record d'indisponibilité du parc nucléaire français, trois réacteurs de Gravelines arrêtés par un afflux de méduses, cours d'eau à sec : l'été 2026 illustre la dépendance du système électrique aux conditions qu'il contribue à modifier.",
+  "url": "veille-n01.html#canicule-electricite"
+ },
+ {
+  "id": "n01-pacte-la-mecque",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 16,
+  "domaine": "Géopolitique, Sécurité & Défense",
+  "titre": "Le pacte de La Mecque rebat les cartes de l'Asie du Sud",
+  "accroche": "Le Pakistan, l'Arabie saoudite et la Turquie ont signé le 7 août un engagement de défense mutuelle. L'accord adosse la puissance financière saoudienne à l'armée pakistanaise, seule force nucléaire du monde musulman, et fragilise l'Inde.",
+  "url": "veille-n01.html#pacte-la-mecque"
+ },
+ {
+  "id": "n01-breves",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 17,
+  "domaine": "Brèves",
+  "titre": "Droit &amp; Argent",
+  "accroche": "",
+  "url": "veille-n01.html#breves"
+ },
+ {
+  "id": "n01-actu",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 18,
+  "domaine": "Brèves",
+  "titre": "L'actu en bref",
+  "accroche": "",
+  "url": "veille-n01.html#actu"
  },
  {
   "id": "n00-trontinemab",
   "numero": 0,
   "date": "2026-08-12",
+  "ordre": 0,
   "domaine": "Neurosciences",
   "titre": "Alzheimer : l'année où la barrière est tombée",
   "accroche": "Un anticorps de nouvelle génération franchit enfin la barrière qui protège le cerveau et nettoie les plaques amyloïdes chez 91 % des patients, avec dix fois moins d'effets secondaires. Le traitement préventif d'Alzheimer devient un objectif concret.",
   "url": "veille-n00.html#trontinemab"
  },
  {
+  "id": "n00-karyoptose",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 1,
+  "domaine": "Neurosciences",
+  "titre": "Karyoptose : on a trouvé comment meurent les neurones",
+  "accroche": "Depuis quarante ans, on sait que des protéines toxiques s'accumulent dans Alzheimer et la démence fronto-temporale. Mais comment tuent-elles la cellule ? Une équipe londonienne vient d'identifier le mécanisme, et c'est une forme de mort cellulaire inconnue.",
+  "url": "veille-n00.html#karyoptose"
+ },
+ {
+  "id": "n00-cerveau-hd",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 2,
+  "domaine": "Neurosciences",
+  "titre": "Le cerveau passe en haute résolution",
+  "accroche": "Trois avancées de l'année racontent la même histoire : on ne regarde plus le cerveau à la jumelle, on le cartographie neurone par neurone, et on commence à intervenir en temps réel.",
+  "url": "veille-n00.html#cerveau-hd"
+ },
+ {
+  "id": "n00-car-t",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 3,
+  "domaine": "Médecine",
+  "titre": "Le médicament vivant fabriqué en usine",
+  "accroche": "Les cellules CAR-T ont révolutionné le traitement des cancers du sang, mais chaque dose devait être fabriquée sur mesure à partir des cellules du patient. En 2026, les versions « sur étagère », éditées par CRISPR, font leurs preuves. Le médicament vivant devient un produit standardisé.",
+  "url": "veille-n00.html#car-t"
+ },
+ {
+  "id": "n00-essais-adaptatifs",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 4,
+  "domaine": "Médecine",
+  "titre": "L'essai clinique qui apprend en marchant",
+  "accroche": "Pour les tumeurs cérébrales, un essai d'un genre nouveau vient d'ouvrir : une plateforme mondiale où chaque patient reçoit le traitement correspondant à la génétique de sa tumeur, et où les bras de l'essai s'ouvrent et se ferment selon les résultats.",
+  "url": "veille-n00.html#essais-adaptatifs"
+ },
+ {
+  "id": "n00-replication",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 5,
+  "domaine": "Psychologie",
+  "titre": "La moitié de la science sociale ne se réplique pas",
+  "accroche": "Le plus grand audit jamais mené sur les sciences humaines a rendu son verdict dans Nature en avril : environ un résultat publié sur deux résiste à la revérification. Ce n'est pas la fin de la science, c'est son mode d'emploi.",
+  "url": "veille-n00.html#replication"
+ },
+ {
+  "id": "n00-thc-ptsd",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 6,
+  "domaine": "Psychologie",
+  "titre": "Du THC contre les cauchemars traumatiques",
+  "accroche": "Dans un essai contrôlé allemand publié dans Nature, un tiers des patients PTSD sous dronabinol ont vu leurs cauchemars disparaître complètement en dix semaines. Un espoir sérieux pour un symptôme qui résiste à presque tout.",
+  "url": "veille-n00.html#thc-ptsd"
+ },
+ {
+  "id": "n00-ia-infrastructure",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 7,
+  "domaine": "Intelligence artificielle",
+  "titre": "L'IA devient une infrastructure",
+  "accroche": "Agents qui travaillent seuls, modèles géants et modèles frugaux, open source qui rattrape par l'entraînement final, premiers déploiements d'État : huit mois qui ont fait passer l'IA du statut de produit à celui d'équipement de base.",
+  "url": "veille-n00.html#ia-infrastructure"
+ },
+ {
+  "id": "n00-ia-doute",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 8,
+  "domaine": "Intelligence artificielle",
+  "titre": "Apprendre aux machines à dire « je ne sais pas »",
+  "accroche": "Le talon d'Achille des modèles de langage n'est pas leur ignorance, c'est leur aplomb. En 2026, la calibration de l'incertitude est devenue un front de recherche central, et les premiers résultats changent la manière d'utiliser ces systèmes.",
+  "url": "veille-n00.html#ia-doute"
+ },
+ {
+  "id": "n00-filrouge",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 9,
+  "domaine": "Fil rouge",
+  "titre": "La confiance se mesure",
+  "accroche": "",
+  "url": "veille-n00.html#filrouge"
+ },
+ {
+  "id": "n00-3i-atlas",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 10,
+  "domaine": "Espace & Physique",
+  "titre": "La visiteuse plus vieille que le Soleil",
+  "accroche": "La comète 3I/ATLAS, troisième objet interstellaire jamais détecté, traverse notre système solaire. Sa chimie ne ressemble à rien de connu, et son âge estimé donne le vertige : elle serait née jusqu'à 12 milliards d'années en arrière, avant même notre étoile.",
+  "url": "veille-n00.html#3i-atlas"
+ },
+ {
+  "id": "n00-exoplanetes",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 11,
+  "domaine": "Espace & Physique",
+  "titre": "L'année où les exoplanètes ont cassé les modèles",
+  "accroche": "Une planète en forme de citron, un monde dont l'atmosphère sent le soufre, une géante restée cachée dans le système le plus scruté du ciel : le télescope James Webb a enchaîné les découvertes qui obligent à réécrire les manuels.",
+  "url": "veille-n00.html#exoplanetes"
+ },
+ {
+  "id": "n00-gta-vi",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 12,
+  "domaine": "Culture & industries créatives",
+  "titre": "GTA VI, l'événement économique déguisé en jeu vidéo",
+  "accroche": "Cinq milliards de dollars attendus la première semaine : le lancement de Grand Theft Auto VI, prévu le 19 novembre, serait le plus gros de l'histoire du divertissement, tous médias confondus. Toute une industrie a réorganisé son calendrier pour ne pas se trouver sur sa trajectoire.",
+  "url": "veille-n00.html#gta-vi"
+ },
+ {
+  "id": "n00-musique-ia",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 13,
+  "domaine": "Culture & industries créatives",
+  "titre": "Musique et IA : la guerre est finie, les ennuis commencent",
+  "accroche": "Les majors ont réglé une partie de leurs procès contre les générateurs de musique Suno et Udio : licences, anciens modèles supprimés, catalogues sous contrat. Mais les accords ont ouvert un conflit inattendu : les musiciens attaquent maintenant leurs propres maisons de disques.",
+  "url": "veille-n00.html#musique-ia"
+ },
+ {
+  "id": "n00-studio-ip",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 14,
+  "domaine": "Post-prod & Musique",
+  "titre": "Le studio quitte le câble vidéo pour le réseau",
+  "accroche": "Derrière l'avalanche d'annonces Blackmagic du printemps (Resolve 21, consoles Fairlight, commutateurs réseau), une bascule discrète : la vidéo professionnelle abandonne son câblage historique pour l'informatique en réseau. Le studio devient un data center.",
+  "url": "veille-n00.html#studio-ip"
+ },
+ {
   "id": "n00-venezuela",
   "numero": 0,
   "date": "2026-08-12",
+  "ordre": 15,
   "domaine": "Géopolitique, Sécurité & Défense",
   "titre": "Venezuela : anatomie d'une capture",
   "accroche": "Le 3 janvier, une opération militaire américaine d'une ampleur inédite a enlevé le président vénézuélien Nicolás Maduro pour le livrer à la justice new-yorkaise. Plus de 150 aéronefs, un raid éclair, et un pays plongé dans le chaos d'après.",
   "url": "veille-n00.html#venezuela"
+ },
+ {
+  "id": "n00-multifronts",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 16,
+  "domaine": "Géopolitique, Sécurité & Défense",
+  "titre": "Un monde à plusieurs fronts",
+  "accroche": "Au-delà du Venezuela, le premier semestre a superposé les théâtres : escalade autour de l'Iran, guerre d'usure en Ukraine, poudrière au Cachemire et dans les Grands Lacs africains. Tour d'horizon de ce qui structure l'année, froidement.",
+  "url": "veille-n00.html#multifronts"
+ },
+ {
+  "id": "n00-attribution",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 17,
+  "domaine": "Climat",
+  "titre": "Des canicules avec des noms de sociétés",
+  "accroche": "L'Europe a battu ses records de chaleur de mai puis de juin, sur fond de troisième début d'année le plus chaud jamais mesuré. Et la science sait désormais chiffrer la responsabilité de chaque grand émetteur dans une canicule donnée. Les juristes ont pris note.",
+  "url": "veille-n00.html#attribution"
+ },
+ {
+  "id": "n00-amoc",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 18,
+  "domaine": "Climat",
+  "titre": "L'océan qu'on cesse de surveiller au pire moment",
+  "accroche": "Le grand courant atlantique qui tempère le climat européen montre des signes de fragilité, et une étude de juin suggère qu'un effondrement bouleverserait le climat dix fois plus vite qu'estimé. Pendant ce temps, le réseau qui le surveille perd ses financements les uns après les autres.",
+  "url": "veille-n00.html#amoc"
+ },
+ {
+  "id": "n00-inflation",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 19,
+  "domaine": "Économie",
+  "titre": "L'inflation revenue par le pétrole, les marchés au sommet quand même",
+  "accroche": "La guerre au Moyen-Orient a renchéri le brut, l'inflation est remontée à des plus hauts pluriannuels, et la banque centrale américaine a suspendu ses baisses de taux. Pourtant les Bourses alignent les records. Le paradoxe s'explique.",
+  "url": "veille-n00.html#inflation"
+ },
+ {
+  "id": "n00-adn-ancien",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 20,
+  "domaine": "Histoire",
+  "titre": "L'ADN ancien a réécrit trois histoires cette année",
+  "accroche": "Un troisième peuple fondateur du Japon, une population de bâtisseurs de mégalithes remplacée sans laisser d'héritiers, et la trace des Dénisoviens toujours active dans nos corps : la paléogénétique transforme l'archéologie en science des populations.",
+  "url": "veille-n00.html#adn-ancien"
+ },
+ {
+  "id": "n00-breves",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 21,
+  "domaine": "Brèves",
+  "titre": "Droit &amp; Argent : ce que 2026 a changé",
+  "accroche": "",
+  "url": "veille-n00.html#breves"
+ },
+ {
+  "id": "n00-chrono",
+  "numero": 0,
+  "date": "2026-08-12",
+  "ordre": 22,
+  "domaine": "Brèves",
+  "titre": "2026 en huit dates",
+  "accroche": "",
+  "url": "veille-n00.html#chrono"
  }
 ]

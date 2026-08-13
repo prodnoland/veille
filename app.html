@@ -21,6 +21,7 @@
   --gris: #6b6d72;
   --hairline: #dfdeda;
   --ok: #2e7d4f;
+  --non: #8a2b1d;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { background: #e9e6e0; }
@@ -34,7 +35,6 @@ body {
   box-shadow: 0 0 34px rgba(20, 20, 20, 0.13);
   padding: 20px 18px calc(40px + env(safe-area-inset-bottom)) 18px;
 }
-.sans { font-family: "Avenir Next", "Avenir", -apple-system, "Segoe UI", sans-serif; }
 header { text-align: center; margin-bottom: 14px; }
 header h1 {
   font-weight: 900;
@@ -46,7 +46,7 @@ header h1 {
 .tabs { display: flex; gap: 8px; margin: 14px 0 6px 0; }
 .tab {
   flex: 1;
-  font-family: "Avenir Next", "Avenir", -apple-system, sans-serif;
+  font-family: "Avenir Next", "Avenir", -apple-system, "Segoe UI", sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -73,7 +73,8 @@ header h1 {
   border-top: 1px solid var(--hairline);
 }
 .carte { background: var(--accent-pale); border-top: 3px solid var(--accent); padding: 14px 16px; }
-.carte.lue { opacity: 0.72; border-top-color: var(--hairline); }
+.carte.archivee { opacity: 0.75; border-top-color: var(--hairline); }
+.entete-carte { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
 .domaine {
   font-family: "Avenir Next", "Avenir", -apple-system, sans-serif;
   font-size: 10px;
@@ -84,8 +85,18 @@ header h1 {
   background: var(--encre);
   display: inline-block;
   padding: 3px 8px;
-  margin-bottom: 8px;
 }
+.etat {
+  font-family: "Avenir Next", "Avenir", -apple-system, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  color: #fff;
+}
+.etat.lu { background: var(--ok); }
+.etat.passe { background: var(--non); }
 .carte h2 { font-size: 18px; font-weight: 900; line-height: 1.22; margin-bottom: 6px; }
 .carte h2 a { color: inherit; text-decoration: none; }
 .accroche {
@@ -95,7 +106,7 @@ header h1 {
   line-height: 1.5;
   margin-bottom: 10px;
 }
-.actions { display: flex; gap: 8px; align-items: center; }
+.actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 .btn {
   font-family: "Avenir Next", "Avenir", -apple-system, sans-serif;
   font-size: 12.5px;
@@ -106,28 +117,16 @@ header h1 {
   padding: 7px 12px;
   cursor: pointer;
   border-radius: 0;
+  text-decoration: none;
 }
-.btn.lire { border-color: var(--accent); color: var(--accent-sombre); }
-.btn.fait { background: var(--ok); border-color: var(--ok); color: #fff; }
+.btn.lire { border-color: var(--accent); background: var(--accent); color: #fff; }
+.btn.passer { color: var(--non); }
 .btn.vote.on-plus { background: var(--accent); border-color: var(--accent); color: #fff; }
-.btn.vote.on-moins { background: #8a2b1d; border-color: #8a2b1d; color: #fff; }
-.vide {
-  text-align: center;
-  color: var(--gris);
-  font-style: italic;
-  padding: 40px 0;
-}
+.btn.vote.on-moins { background: var(--non); border-color: var(--non); color: #fff; }
+.vide { text-align: center; color: var(--gris); font-style: italic; padding: 40px 0; }
 footer { margin-top: 28px; text-align: center; }
-#bilan {
-  font-family: "Avenir Next", "Avenir", -apple-system, sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--accent-sombre);
-  background: none;
-  border: 1.5px solid var(--accent);
-  padding: 9px 16px;
-  cursor: pointer;
-}
+.pied-actions { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.pied-actions .btn { border-color: var(--accent); color: var(--accent-sombre); }
 #bilan-zone {
   width: 100%;
   margin-top: 10px;
@@ -153,32 +152,47 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 </header>
 <div class="tabs" role="tablist">
   <button class="tab actif" id="tab-alire" onclick="bascule('alire')">À lire <span class="compteur" id="c-alire"></span></button>
-  <button class="tab" id="tab-lus" onclick="bascule('lus')">Lus <span class="compteur" id="c-lus"></span></button>
+  <button class="tab" id="tab-archives" onclick="bascule('archives')">Archives <span class="compteur" id="c-archives"></span></button>
 </div>
 <div id="liste"></div>
 <footer>
-  <button id="bilan" onclick="exporterBilan()">Copier le bilan pour Claude</button>
+  <div class="pied-actions">
+    <button class="btn" onclick="envoyerGitHub()">Envoyer le bilan à Claude</button>
+    <button class="btn" onclick="copierBilan()">Copier</button>
+  </div>
   <textarea id="bilan-zone" readonly aria-label="Bilan de lecture"></textarea>
-  <p class="note">Le bilan résume tes lectures et tes votes : colle-le dans une session
-  Claude Code pour affiner les prochains numéros. Tout reste sur ton appareil.</p>
+  <p class="note">« Envoyer » ouvre GitHub avec le bilan prérempli : un appui sur
+  « Submit » et Claude le récupérera à la prochaine génération. Tout le suivi
+  de lecture reste sinon sur ton appareil.</p>
 </footer>
 <script>
 "use strict";
-const LS_READ = "veille.lus", LS_VOTE = "veille.votes";
+const LS_READ = "veille.lus", LS_VOTE = "veille.votes", LS_PASS = "veille.passes";
+const REPO = "prodnoland/veille";
 let articles = [], onglet = "alire";
 const lus = () => JSON.parse(localStorage.getItem(LS_READ) || "{}");
 const votes = () => JSON.parse(localStorage.getItem(LS_VOTE) || "{}");
+const passes = () => JSON.parse(localStorage.getItem(LS_PASS) || "{}");
 const save = (k, o) => localStorage.setItem(k, JSON.stringify(o));
+const jour = () => new Date().toISOString().slice(0, 10);
 
-function marquer(id, lu) {
-  const l = lus();
-  if (lu) l[id] = new Date().toISOString().slice(0, 10); else delete l[id];
-  save(LS_READ, l);
+function marquerLu(id) {
+  const l = lus(); l[id] = jour(); save(LS_READ, l);
+  rendre();
+}
+function passer(id) {
+  const p = passes(); p[id] = jour(); save(LS_PASS, p);
+  rendre();
+}
+function remettre(id) {
+  const l = lus(), p = passes();
+  delete l[id]; delete p[id];
+  save(LS_READ, l); save(LS_PASS, p);
   rendre();
 }
 function voter(id, v) {
   const o = votes();
-  o[id] = (o[id] === v) ? 0 : v;   // re-cliquer annule
+  o[id] = (o[id] === v) ? 0 : v;
   if (!o[id]) delete o[id];
   save(LS_VOTE, o);
   rendre();
@@ -186,34 +200,42 @@ function voter(id, v) {
 function bascule(t) {
   onglet = t;
   document.getElementById("tab-alire").classList.toggle("actif", t === "alire");
-  document.getElementById("tab-lus").classList.toggle("actif", t === "lus");
+  document.getElementById("tab-archives").classList.toggle("actif", t === "archives");
   rendre();
 }
-function carte(a, estLu) {
+function carte(a) {
+  const estLu = a.id in lus(), estPasse = a.id in passes();
   const v = votes()[a.id] || 0;
-  return `<div class="carte${estLu ? " lue" : ""}">
-    <span class="domaine">n°${a.numero} · ${a.domaine}</span>
+  const etat = estLu ? '<span class="etat lu">✓ lu</span>'
+             : estPasse ? '<span class="etat passe">✗ passé</span>' : "";
+  const actions = (estLu || estPasse)
+    ? `<button class="btn" onclick="remettre('${a.id}')">↩︎ Remettre à lire</button>
+       <button class="btn vote${v === 1 ? " on-plus" : ""}" onclick="voter('${a.id}', 1)" aria-label="J'aime">👍</button>
+       <button class="btn vote${v === -1 ? " on-moins" : ""}" onclick="voter('${a.id}', -1)" aria-label="Je n'aime pas">👎</button>`
+    : `<a class="btn lire" href="${a.url}">Oui, lire</a>
+       <button class="btn" onclick="marquerLu('${a.id}')">✓ Lu</button>
+       <button class="btn passer" onclick="passer('${a.id}')">✗ Pas intéressé</button>
+       <button class="btn vote${v === 1 ? " on-plus" : ""}" onclick="voter('${a.id}', 1)" aria-label="J'aime">👍</button>
+       <button class="btn vote${v === -1 ? " on-moins" : ""}" onclick="voter('${a.id}', -1)" aria-label="Je n'aime pas">👎</button>`;
+  return `<div class="carte${(estLu || estPasse) ? " archivee" : ""}">
+    <div class="entete-carte"><span class="domaine">${a.domaine}</span>${etat}</div>
     <h2><a href="${a.url}">${a.titre}</a></h2>
     <p class="accroche">${a.accroche}</p>
-    <div class="actions">
-      <a class="btn lire" href="${a.url}">Ouvrir</a>
-      <button class="btn${estLu ? " fait" : ""}" onclick="marquer('${a.id}', ${!estLu})">${estLu ? "✓ Lu" : "Marquer lu"}</button>
-      <button class="btn vote${v === 1 ? " on-plus" : ""}" onclick="voter('${a.id}', 1)" aria-label="J'aime">👍</button>
-      <button class="btn vote${v === -1 ? " on-moins" : ""}" onclick="voter('${a.id}', -1)" aria-label="Je n'aime pas">👎</button>
-    </div>
+    <div class="actions">${actions}</div>
   </div>`;
 }
 function rendre() {
-  const l = lus();
-  const visibles = articles.filter(a => (onglet === "alire") !== (a.id in l));
+  const l = lus(), p = passes();
+  const archive = a => (a.id in l) || (a.id in p);
+  const visibles = articles.filter(a => (onglet === "alire") ? !archive(a) : archive(a));
   document.getElementById("c-alire").textContent =
-    "(" + articles.filter(a => !(a.id in l)).length + ")";
-  document.getElementById("c-lus").textContent =
-    "(" + articles.filter(a => a.id in l).length + ")";
+    "(" + articles.filter(a => !archive(a)).length + ")";
+  document.getElementById("c-archives").textContent =
+    "(" + articles.filter(archive).length + ")";
   const zone = document.getElementById("liste");
   if (!visibles.length) {
     zone.innerHTML = `<p class="vide">${onglet === "alire"
-      ? "Tout est lu. Le prochain numéro arrive dimanche."
+      ? "Tout est trié. Le prochain numéro arrive dimanche."
       : "Rien d'archivé pour l'instant."}</p>`;
     return;
   }
@@ -223,33 +245,38 @@ function rendre() {
       numCourant = a.numero;
       html += `<p class="groupe-titre">Numéro ${a.numero} · ${a.date}</p>`;
     }
-    html += carte(a, a.id in l);
+    html += carte(a);
   }
   zone.innerHTML = html;
 }
-function exporterBilan() {
-  const l = lus(), v = votes();
+function texteBilan() {
+  const l = lus(), p = passes(), v = votes();
   const nom = id => (articles.find(a => a.id === id) || { titre: id }).titre;
+  const liste = o => Object.keys(o).map(nom);
   const plus = Object.keys(v).filter(k => v[k] === 1).map(nom);
   const moins = Object.keys(v).filter(k => v[k] === -1).map(nom);
-  const nonLus = articles.filter(a => !(a.id in l)).map(a => a.titre);
-  const txt = [
-    "Bilan de lecture VEILLE (" + new Date().toISOString().slice(0, 10) + ")",
-    "Lus : " + Object.keys(l).length + "/" + articles.length,
+  return [
+    "Bilan de lecture VEILLE (" + jour() + ")",
+    "Lus : " + Object.keys(l).length + " · Passés : " + Object.keys(p).length +
+      " · Restants : " + articles.filter(a => !(a.id in l) && !(a.id in p)).length,
     plus.length ? "👍 " + plus.join(" | ") : "👍 aucun",
     moins.length ? "👎 " + moins.join(" | ") : "👎 aucun",
-    nonLus.length ? "Non lus : " + nonLus.join(" | ") : "Tout est lu.",
-  ].join("\n");
+    Object.keys(p).length ? "✗ Passés (pas intéressé) : " + liste(p).join(" | ") : "",
+  ].filter(Boolean).join("\n");
+}
+function envoyerGitHub() {
+  const txt = texteBilan();
+  const url = "https://github.com/" + REPO + "/issues/new" +
+    "?title=" + encodeURIComponent("Bilan de lecture " + jour()) +
+    "&body=" + encodeURIComponent(txt);
+  window.open(url, "_blank");
+}
+function copierBilan() {
+  const txt = texteBilan();
   const zone = document.getElementById("bilan-zone");
   zone.style.display = "block";
   zone.value = txt;
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(txt).then(() => {
-      document.getElementById("bilan").textContent = "Copié ✓";
-      setTimeout(() => document.getElementById("bilan").textContent =
-        "Copier le bilan pour Claude", 2000);
-    });
-  }
+  if (navigator.clipboard) navigator.clipboard.writeText(txt);
 }
 fetch("articles.json")
   .then(r => r.json())
