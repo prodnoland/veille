@@ -361,6 +361,17 @@ body {
   text-align: center;
 }
 #pied-bilan .btn { font-size: 12px; padding: 8px 14px; border-color: var(--accent); color: var(--accent-sombre); }
+#bilan-zone {
+  width: 100%;
+  margin-top: 8px;
+  font-family: "Menlo", monospace;
+  font-size: 10.5px;
+  min-height: 110px;
+  display: none;
+  padding: 8px;
+  border: 1px solid var(--hairline);
+}
+.deck-carte { cursor: pointer; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { .deck-carte { transition: none; } }
 </style>
@@ -385,7 +396,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
     </div>
   </div>
   <div id="pied-bilan">
-    <button class="btn" onclick="envoyerGitHub()">Envoyer le bilan à Claude</button>
+    <button class="btn" id="btn-bilan" onclick="copierBilan()">Copier le bilan pour Claude</button>
+    <textarea id="bilan-zone" readonly aria-label="Bilan de lecture"></textarea>
   </div>
 </div>
 
@@ -407,14 +419,17 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 <script>
 "use strict";
 const LS_READ = "veille.lus", LS_VOTE = "veille.votes", LS_PASS = "veille.passes";
-const REPO = "prodnoland/veille";
 let articles = [], vue = "tri", enLecture = null;
 const lus = () => JSON.parse(localStorage.getItem(LS_READ) || "{}");
 const votes = () => JSON.parse(localStorage.getItem(LS_VOTE) || "{}");
 const passes = () => JSON.parse(localStorage.getItem(LS_PASS) || "{}");
 const save = (k, o) => localStorage.setItem(k, JSON.stringify(o));
 const jour = () => new Date().toISOString().slice(0, 10);
-const archive = a => (a.id in lus()) || (a.id in passes());
+/* état « officiel » (synchronisé via Claude) fusionné avec l'état local */
+const estLu = a => (a.id in lus()) || a.lu === true;
+const estPasse = a => (a.id in passes()) || a.passe === true;
+const archive = a => estLu(a) || estPasse(a);
+const voteDe = a => (votes()[a.id] !== undefined) ? votes()[a.id] : (a.vote || 0);
 const restants = () => articles.filter(a => !archive(a));
 
 function courant() { return restants()[0] || null; }
@@ -438,46 +453,14 @@ function rendreTri() {
     return;
   }
   actions.style.visibility = "visible";
-  zone.innerHTML = `<div class="deck-carte" id="deck">
-    <span class="indice gauche" id="ind-g">✗ passer</span>
-    <span class="indice droite" id="ind-d">lire →</span>
+  zone.innerHTML = `<div class="deck-carte" id="deck" role="button" tabindex="0"
+      onclick="lireCourant()" onkeydown="if(event.key==='Enter')lireCourant()">
     <span class="domaine">n°${a.numero} · ${a.domaine}</span>
     <h2>${a.titre}</h2>
     <p class="accroche">${a.accroche}</p>
   </div>`;
-  const idx = articles.filter(x => x.numero === a.numero).indexOf(a);
   document.getElementById("progression").textContent =
-    `${restants().length} à trier · glisse à droite pour lire, à gauche pour passer`;
-  brancherSwipe(document.getElementById("deck"));
-}
-
-/* balayage façon Tinder : droite = lire, gauche = passer */
-function brancherSwipe(el) {
-  let x0 = null, dx = 0;
-  el.addEventListener("pointerdown", e => { x0 = e.clientX; el.setPointerCapture(e.pointerId); });
-  el.addEventListener("pointermove", e => {
-    if (x0 === null) return;
-    dx = e.clientX - x0;
-    el.style.transform = `translateX(${dx}px) rotate(${dx / 30}deg)`;
-    document.getElementById("ind-g").style.opacity = dx < -30 ? 1 : 0;
-    document.getElementById("ind-d").style.opacity = dx > 30 ? 1 : 0;
-  });
-  const fin = () => {
-    if (x0 === null) return;
-    if (dx < -80) { animerSortie(el, -1, passerCourant); }
-    else if (dx > 80) { el.style.transform = ""; lireCourant(); }
-    else { el.style.transform = ""; }
-    document.getElementById("ind-g").style.opacity = 0;
-    document.getElementById("ind-d").style.opacity = 0;
-    x0 = null; dx = 0;
-  };
-  el.addEventListener("pointerup", fin);
-  el.addEventListener("pointercancel", fin);
-}
-function animerSortie(el, sens, apres) {
-  el.style.transform = `translateX(${sens * 500}px) rotate(${sens * 16}deg)`;
-  el.style.opacity = "0";
-  setTimeout(apres, 160);
+    `${restants().length} à trier · touche la carte pour lire l'article`;
 }
 
 function passerCourant() {
@@ -516,7 +499,7 @@ function ouvrirLecture(a) {
     });
 }
 function majVotesLecture() {
-  const v = votes()[enLecture.id] || 0;
+  const v = voteDe(enLecture);
   document.getElementById("v-plus").classList.toggle("on-plus", v === 1);
   document.getElementById("v-moins").classList.toggle("on-moins", v === -1);
 }
@@ -549,9 +532,9 @@ function rendreArchives() {
     return;
   }
   zone.innerHTML = items.map(a => {
-    const v = votes()[a.id] || 0;
-    const etat = (a.id in l) ? '<span class="etat lu">✓ lu</span>'
-                             : '<span class="etat passe">✗ passé</span>';
+    const v = voteDe(a);
+    const etat = estLu(a) ? '<span class="etat lu">✓ lu</span>'
+                          : '<span class="etat passe">✗ passé</span>';
     const voteTxt = v === 1 ? " · 👍" : v === -1 ? " · 👎" : "";
     return `<div class="liste-carte">
       <div class="entete"><span class="domaine">n°${a.numero} · ${a.domaine}</span>${etat}<span class="sans" style="font-size:11px;color:var(--gris)">${voteTxt}</span></div>
@@ -588,22 +571,35 @@ function bascule(t) {
 function texteBilan() {
   const l = lus(), p = passes(), v = votes();
   const nom = id => (articles.find(a => a.id === id) || { titre: id }).titre;
-  const plus = Object.keys(v).filter(k => v[k] === 1).map(nom);
-  const moins = Object.keys(v).filter(k => v[k] === -1).map(nom);
+  const plus = Object.keys(v).filter(k => v[k] === 1);
+  const moins = Object.keys(v).filter(k => v[k] === -1);
   return [
     "Bilan de lecture VEILLE (" + jour() + ")",
     "Lus : " + Object.keys(l).length + " · Passés : " + Object.keys(p).length +
       " · Restants : " + restants().length,
-    plus.length ? "👍 " + plus.join(" | ") : "👍 aucun",
-    moins.length ? "👎 " + moins.join(" | ") : "👎 aucun",
-    Object.keys(p).length ? "✗ Passés (pas intéressé) : " + Object.keys(p).map(nom).join(" | ") : "",
-  ].filter(Boolean).join("\n");
+    plus.length ? "👍 " + plus.map(nom).join(" | ") : "👍 aucun",
+    moins.length ? "👎 " + moins.map(nom).join(" | ") : "👎 aucun",
+    Object.keys(p).length ? "✗ Passés : " + Object.keys(p).map(nom).join(" | ") : "",
+    "",
+    "--- données pour Claude (ne pas modifier) ---",
+    "lus: " + Object.keys(l).join(","),
+    "passes: " + Object.keys(p).join(","),
+    "plus: " + plus.join(","),
+    "moins: " + moins.join(","),
+  ].filter(x => x !== null).join("\n");
 }
-function envoyerGitHub() {
-  const url = "https://github.com/" + REPO + "/issues/new" +
-    "?title=" + encodeURIComponent("Bilan de lecture " + jour()) +
-    "&body=" + encodeURIComponent(texteBilan());
-  window.open(url, "_blank");
+function copierBilan() {
+  const txt = texteBilan();
+  const zone = document.getElementById("bilan-zone");
+  zone.style.display = "block";
+  zone.value = txt;
+  const btn = document.getElementById("btn-bilan");
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(txt).then(() => {
+      btn.textContent = "Copié ✓ — colle-le à Claude";
+      setTimeout(() => btn.textContent = "Copier le bilan pour Claude", 2500);
+    });
+  }
 }
 
 fetch("articles.json")
