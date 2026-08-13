@@ -1,0 +1,13 @@
+{
+  "name": "VEILLE",
+  "short_name": "VEILLE",
+  "description": "Revue de veille personnelle : sciences, idées et industries créatives",
+  "start_url": "app.html",
+  "display": "standalone",
+  "background_color": "#fdfcfa",
+  "theme_color": "#235a97",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
