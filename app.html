@@ -422,6 +422,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   </div>
   <div id="pied-bilan">
     <button class="btn" id="btn-bilan" onclick="copierBilan()">Copier le bilan pour Claude</button>
+    <button class="btn" onclick="toutRemettre()">Tout remettre à trier</button>
     <textarea id="bilan-zone" readonly aria-label="Bilan de lecture"></textarea>
   </div>
 </div>
@@ -599,7 +600,7 @@ function rendreArchives() {
     }
     const v = voteDe(a);
     const etat = estLu(a) ? '<span class="etat lu">✓ lu</span>'
-                          : '<span class="etat passe">✗ passé</span>';
+                          : '<span class="etat passe">✗ pas intéressé</span>';
     const voteTxt = v === 1 ? "👍" : v === -1 ? "👎" : "";
     html += `<div class="liste-carte">
       <div class="entete"><span class="domaine">${a.domaine}</span>${etat}<span class="sans" style="font-size:12px">${voteTxt}</span></div>
@@ -641,11 +642,11 @@ function texteBilan() {
   const moins = Object.keys(v).filter(k => v[k] === -1);
   return [
     "Bilan de lecture VEILLE (" + jour() + ")",
-    "Lus : " + Object.keys(l).length + " · Passés : " + Object.keys(p).length +
+    "Lus : " + Object.keys(l).length + " · Pas intéressé : " + Object.keys(p).length +
       " · Restants : " + restants().length,
     plus.length ? "👍 " + plus.map(nom).join(" | ") : "👍 aucun",
     moins.length ? "👎 " + moins.map(nom).join(" | ") : "👎 aucun",
-    Object.keys(p).length ? "✗ Passés : " + Object.keys(p).map(nom).join(" | ") : "",
+    Object.keys(p).length ? "✗ Pas intéressé : " + Object.keys(p).map(nom).join(" | ") : "",
     "",
     "--- données pour Claude (ne pas modifier) ---",
     "lus: " + Object.keys(l).join(","),
@@ -653,6 +654,14 @@ function texteBilan() {
     "plus: " + plus.join(","),
     "moins: " + moins.join(","),
   ].filter(x => x !== null).join("\n");
+}
+function toutRemettre() {
+  const n = articles.filter(archive).length;
+  if (!n) { alert("Rien à remettre : aucun article n'est encore trié."); return; }
+  if (!confirm(`Remettre les ${n} articles archivés dans « à trier » ? Tes 👍 et 👎 sont conservés.`)) return;
+  localStorage.removeItem(LS_READ);
+  localStorage.removeItem(LS_PASS);
+  bascule("tri");
 }
 function copierBilan() {
   const txt = texteBilan();
