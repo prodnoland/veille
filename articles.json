@@ -1,195 +1,5 @@
 [
  {
-  "id": "n01-apprentissage-un-coup",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 0,
-  "domaine": "Neurosciences",
-  "titre": "Le cerveau garde une porte dérobée pour apprendre en une seule fois",
-  "accroche": "Une équipe montre chez la souris que l'apprentissage en un seul essai passe par une voie synaptique différente de celle de l'apprentissage par répétition, gouvernée par les endocannabinoïdes du striatum.",
-  "url": "veille-n01.html#apprentissage-un-coup"
- },
- {
-  "id": "n01-microglie-alzheimer",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 1,
-  "domaine": "Neurosciences",
-  "titre": "Alzheimer : les cellules immunitaires du cerveau changent de statut",
-  "accroche": "En cartographiant 830 000 cellules immunitaires cérébrales, des chercheurs identifient une population de microglies protectrices qui augmente avec la maladie. Une autre étude montre que le sang vient renouveler ces cellules dans le cerveau âgé.",
-  "url": "veille-n01.html#microglie-alzheimer"
- },
- {
-  "id": "n01-eclipse-12-aout",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 2,
-  "domaine": "Espace & Physique",
-  "titre": "Ce soir, l'Europe passe dans l'ombre de la Lune",
-  "accroche": "La seule éclipse totale de l'année traverse le Groenland, l'Islande, le nord du Portugal et l'Espagne. C'est la première totalité sur l'Espagne continentale depuis 1905, et une fenêtre de quelques minutes pour les physiciens du Soleil.",
-  "url": "veille-n01.html#eclipse-12-aout"
- },
- {
-  "id": "n01-glueball",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 3,
-  "domaine": "Espace & Physique",
-  "titre": "La boule de glue, une particule faite de pure force",
-  "accroche": "Après quinze ans d'analyse, la collaboration BESIII conclut que la particule X(2370) est dominée par un état de gluons purs. Une prédiction vieille d'un demi-siècle trouve enfin son objet.",
-  "url": "veille-n01.html#glueball"
- },
- {
-  "id": "n01-ea-pif",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 4,
-  "domaine": "Culture & industries créatives",
-  "titre": "Electronic Arts change de mains pour 55 milliards de dollars",
-  "accroche": "Le fonds souverain saoudien, associé au fonds de Jared Kushner, a bouclé le rachat d'EA et sorti l'éditeur de la Bourse. Le montage repose sur la dette, dans une industrie qui licencie depuis trois ans.",
-  "url": "veille-n01.html#ea-pif"
- },
- {
-  "id": "n01-suno-spotify",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 5,
-  "domaine": "Culture & industries créatives",
-  "titre": "La musique générée cherche sa respectabilité",
-  "accroche": "Suno signe avec BMG, limite les téléchargements et prépare des filigranes ; Spotify étiquette les artistes artificiels et les retire de ses recommandations par défaut. L'industrie passe du procès au contrat.",
-  "url": "veille-n01.html#suno-spotify"
- },
- {
-  "id": "n01-vst-30-ans",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 6,
-  "domaine": "Post-prod & Musique",
-  "titre": "Trente ans de VST, et une pluie de plugins gratuits",
-  "accroche": "Steinberg fête l'anniversaire du format qui a fait entrer le studio dans l'ordinateur en offrant ses instruments historiques. La semaine est par ailleurs généreuse en outils gratuits sérieux.",
-  "url": "veille-n01.html#vst-30-ans"
- },
- {
-  "id": "n01-faille-cdj",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 7,
-  "domaine": "Post-prod & Musique",
-  "titre": "Une faille de sécurité dans les platines CDJ et Rekordbox",
-  "accroche": "AlphaTheta, ex-Pioneer DJ, signale une vulnérabilité touchant de nombreux modèles CDJ et XDJ ainsi que toutes les versions de Rekordbox. Le risque ne concerne que les machines connectées à un réseau.",
-  "url": "veille-n01.html#faille-cdj"
- },
- {
-  "id": "n01-riemann-deux-tiers",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 8,
-  "domaine": "Intelligence artificielle",
-  "titre": "Des agents revendiquent une avancée sur l'hypothèse de Riemann",
-  "accroche": "Anthropic publie un argument, obtenu par deux exécutions d'agents, portant à plus des deux tiers la proportion démontrée de zéros de la fonction zêta situés sur la ligne critique. Le précédent record tenait depuis 1989.",
-  "url": "veille-n01.html#riemann-deux-tiers"
- },
- {
-  "id": "n01-agents-hors-piste",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 9,
-  "domaine": "Intelligence artificielle",
-  "titre": "Des agents d'évaluation ont attaqué de vraies cibles",
-  "accroche": "L'institut britannique de sécurité de l'IA détaille dix-neuf sorties de piste lors de tests de cybersécurité, dont une tentative d'attaque par la chaîne d'approvisionnement contre un dépôt open source. Trois entreprises ont connu des incidents comparables.",
-  "url": "veille-n01.html#agents-hors-piste"
- },
- {
-  "id": "n01-virus-dormants",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 10,
-  "domaine": "Médecine",
-  "titre": "Le Covid réveille les virus dormants que nous hébergeons",
-  "accroche": "Une étude parue dans Nature montre que l'infection réactive durablement herpèsvirus et anellovirus, et que cette réactivation suit la sévérité de la maladie comme le risque de Covid long.",
-  "url": "veille-n01.html#virus-dormants"
- },
- {
-  "id": "n01-chatouilles",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 11,
-  "domaine": "Psychologie & comportement",
-  "titre": "Les chatouilles ont une carte, et elle est la même partout",
-  "accroche": "Chinois, Néerlandais et Grecs partagent les mêmes zones chatouilleuses, et la sensibilité est plus forte là où le corps est rarement touché. De quoi trancher entre plusieurs théories concurrentes.",
-  "url": "veille-n01.html#chatouilles"
- },
- {
-  "id": "n01-trebuchet",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 12,
-  "domaine": "Histoire",
-  "titre": "Un squelette écossais, première victime avérée d'un trébuchet",
-  "accroche": "Les restes d'un combattant du XIVe siècle retrouvés dans un château d'Écosse portent des traces de destruction si étendues qu'elles ne s'expliquent que par l'impact d'un bloc de pierre lancé par une machine de siège.",
-  "url": "veille-n01.html#trebuchet"
- },
- {
-  "id": "n01-filrouge",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 13,
-  "domaine": "Fil rouge",
-  "titre": "Prévoir le ciel a toujours été une affaire de pouvoir",
-  "accroche": "",
-  "url": "veille-n01.html#filrouge"
- },
- {
-  "id": "n01-chomage-jeunes-ia",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 14,
-  "domaine": "Économie",
-  "titre": "Le chômage remonte, et les jeunes encaissent d'abord",
-  "accroche": "L'Insee mesure un taux de chômage à 8,3 % au deuxième trimestre, avec 21,6 % chez les moins de 25 ans. La même bosse s'observe dans plusieurs pays, et le soupçon se porte sur les emplois d'entrée que l'IA absorbe.",
-  "url": "veille-n01.html#chomage-jeunes-ia"
- },
- {
-  "id": "n01-canicule-electricite",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 15,
-  "domaine": "Climat",
-  "titre": "La canicule éteint les centrales au moment où l'on en a besoin",
-  "accroche": "Record d'indisponibilité du parc nucléaire français, trois réacteurs de Gravelines arrêtés par un afflux de méduses, cours d'eau à sec : l'été 2026 illustre la dépendance du système électrique aux conditions qu'il contribue à modifier.",
-  "url": "veille-n01.html#canicule-electricite"
- },
- {
-  "id": "n01-pacte-la-mecque",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 16,
-  "domaine": "Géopolitique, Sécurité & Défense",
-  "titre": "Le pacte de La Mecque rebat les cartes de l'Asie du Sud",
-  "accroche": "Le Pakistan, l'Arabie saoudite et la Turquie ont signé le 7 août un engagement de défense mutuelle. L'accord adosse la puissance financière saoudienne à l'armée pakistanaise, seule force nucléaire du monde musulman, et fragilise l'Inde.",
-  "url": "veille-n01.html#pacte-la-mecque"
- },
- {
-  "id": "n01-breves",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 17,
-  "domaine": "Brèves",
-  "titre": "Droit &amp; Argent",
-  "accroche": "",
-  "url": "veille-n01.html#breves"
- },
- {
-  "id": "n01-actu",
-  "numero": 1,
-  "date": "2026-08-12",
-  "ordre": 18,
-  "domaine": "Brèves",
-  "titre": "L'actu en bref",
-  "accroche": "",
-  "url": "veille-n01.html#actu"
- },
- {
   "id": "n00-trontinemab",
   "numero": 0,
   "date": "2026-08-12",
@@ -418,5 +228,405 @@
   "titre": "2026 en huit dates",
   "accroche": "",
   "url": "veille-n00.html#chrono"
+ },
+ {
+  "id": "n01-apprentissage-un-coup",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 0,
+  "domaine": "Neurosciences",
+  "titre": "Le cerveau garde une porte dérobée pour apprendre en une seule fois",
+  "accroche": "Une équipe montre chez la souris que l'apprentissage en un seul essai passe par une voie synaptique différente de celle de l'apprentissage par répétition, gouvernée par les endocannabinoïdes du striatum.",
+  "url": "veille-n01.html#apprentissage-un-coup"
+ },
+ {
+  "id": "n01-microglie-alzheimer",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 1,
+  "domaine": "Neurosciences",
+  "titre": "Alzheimer : les cellules immunitaires du cerveau changent de statut",
+  "accroche": "En cartographiant 830 000 cellules immunitaires cérébrales, des chercheurs identifient une population de microglies protectrices qui augmente avec la maladie. Une autre étude montre que le sang vient renouveler ces cellules dans le cerveau âgé.",
+  "url": "veille-n01.html#microglie-alzheimer"
+ },
+ {
+  "id": "n01-eclipse-12-aout",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 2,
+  "domaine": "Espace & Physique",
+  "titre": "Ce soir, l'Europe passe dans l'ombre de la Lune",
+  "accroche": "La seule éclipse totale de l'année traverse le Groenland, l'Islande, le nord du Portugal et l'Espagne. C'est la première totalité sur l'Espagne continentale depuis 1905, et une fenêtre de quelques minutes pour les physiciens du Soleil.",
+  "url": "veille-n01.html#eclipse-12-aout"
+ },
+ {
+  "id": "n01-glueball",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 3,
+  "domaine": "Espace & Physique",
+  "titre": "La boule de glue, une particule faite de pure force",
+  "accroche": "Après quinze ans d'analyse, la collaboration BESIII conclut que la particule X(2370) est dominée par un état de gluons purs. Une prédiction vieille d'un demi-siècle trouve enfin son objet.",
+  "url": "veille-n01.html#glueball"
+ },
+ {
+  "id": "n01-ea-pif",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 4,
+  "domaine": "Culture & industries créatives",
+  "titre": "Electronic Arts change de mains pour 55 milliards de dollars",
+  "accroche": "Le fonds souverain saoudien, associé au fonds de Jared Kushner, a bouclé le rachat d'EA et sorti l'éditeur de la Bourse. Le montage repose sur la dette, dans une industrie qui licencie depuis trois ans.",
+  "url": "veille-n01.html#ea-pif"
+ },
+ {
+  "id": "n01-suno-spotify",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 5,
+  "domaine": "Culture & industries créatives",
+  "titre": "La musique générée cherche sa respectabilité",
+  "accroche": "Suno signe avec BMG, limite les téléchargements et prépare des filigranes ; Spotify étiquette les artistes artificiels et les retire de ses recommandations par défaut. L'industrie passe du procès au contrat.",
+  "url": "veille-n01.html#suno-spotify"
+ },
+ {
+  "id": "n01-vst-30-ans",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 6,
+  "domaine": "Post-prod & Musique",
+  "titre": "Trente ans de VST, et une pluie de plugins gratuits",
+  "accroche": "Steinberg fête l'anniversaire du format qui a fait entrer le studio dans l'ordinateur en offrant ses instruments historiques. La semaine est par ailleurs généreuse en outils gratuits sérieux.",
+  "url": "veille-n01.html#vst-30-ans"
+ },
+ {
+  "id": "n01-faille-cdj",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 7,
+  "domaine": "Post-prod & Musique",
+  "titre": "Une faille de sécurité dans les platines CDJ et Rekordbox",
+  "accroche": "AlphaTheta, ex-Pioneer DJ, signale une vulnérabilité touchant de nombreux modèles CDJ et XDJ ainsi que toutes les versions de Rekordbox. Le risque ne concerne que les machines connectées à un réseau.",
+  "url": "veille-n01.html#faille-cdj"
+ },
+ {
+  "id": "n01-riemann-deux-tiers",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 8,
+  "domaine": "Intelligence artificielle",
+  "titre": "Des agents revendiquent une avancée sur l'hypothèse de Riemann",
+  "accroche": "Anthropic publie un argument, obtenu par deux exécutions d'agents, portant à plus des deux tiers la proportion démontrée de zéros de la fonction zêta situés sur la ligne critique. Le précédent record tenait depuis 1989.",
+  "url": "veille-n01.html#riemann-deux-tiers"
+ },
+ {
+  "id": "n01-agents-hors-piste",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 9,
+  "domaine": "Intelligence artificielle",
+  "titre": "Des agents d'évaluation ont attaqué de vraies cibles",
+  "accroche": "L'institut britannique de sécurité de l'IA détaille dix-neuf sorties de piste lors de tests de cybersécurité, dont une tentative d'attaque par la chaîne d'approvisionnement contre un dépôt open source. Trois entreprises ont connu des incidents comparables.",
+  "url": "veille-n01.html#agents-hors-piste"
+ },
+ {
+  "id": "n01-virus-dormants",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 10,
+  "domaine": "Médecine",
+  "titre": "Le Covid réveille les virus dormants que nous hébergeons",
+  "accroche": "Une étude parue dans Nature montre que l'infection réactive durablement herpèsvirus et anellovirus, et que cette réactivation suit la sévérité de la maladie comme le risque de Covid long.",
+  "url": "veille-n01.html#virus-dormants"
+ },
+ {
+  "id": "n01-chatouilles",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 11,
+  "domaine": "Psychologie & comportement",
+  "titre": "Les chatouilles ont une carte, et elle est la même partout",
+  "accroche": "Chinois, Néerlandais et Grecs partagent les mêmes zones chatouilleuses, et la sensibilité est plus forte là où le corps est rarement touché. De quoi trancher entre plusieurs théories concurrentes.",
+  "url": "veille-n01.html#chatouilles"
+ },
+ {
+  "id": "n01-trebuchet",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 12,
+  "domaine": "Histoire",
+  "titre": "Un squelette écossais, première victime avérée d'un trébuchet",
+  "accroche": "Les restes d'un combattant du XIVe siècle retrouvés dans un château d'Écosse portent des traces de destruction si étendues qu'elles ne s'expliquent que par l'impact d'un bloc de pierre lancé par une machine de siège.",
+  "url": "veille-n01.html#trebuchet"
+ },
+ {
+  "id": "n01-filrouge",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 13,
+  "domaine": "Fil rouge",
+  "titre": "Prévoir le ciel a toujours été une affaire de pouvoir",
+  "accroche": "",
+  "url": "veille-n01.html#filrouge"
+ },
+ {
+  "id": "n01-chomage-jeunes-ia",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 14,
+  "domaine": "Économie",
+  "titre": "Le chômage remonte, et les jeunes encaissent d'abord",
+  "accroche": "L'Insee mesure un taux de chômage à 8,3 % au deuxième trimestre, avec 21,6 % chez les moins de 25 ans. La même bosse s'observe dans plusieurs pays, et le soupçon se porte sur les emplois d'entrée que l'IA absorbe.",
+  "url": "veille-n01.html#chomage-jeunes-ia"
+ },
+ {
+  "id": "n01-canicule-electricite",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 15,
+  "domaine": "Climat",
+  "titre": "La canicule éteint les centrales au moment où l'on en a besoin",
+  "accroche": "Record d'indisponibilité du parc nucléaire français, trois réacteurs de Gravelines arrêtés par un afflux de méduses, cours d'eau à sec : l'été 2026 illustre la dépendance du système électrique aux conditions qu'il contribue à modifier.",
+  "url": "veille-n01.html#canicule-electricite"
+ },
+ {
+  "id": "n01-pacte-la-mecque",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 16,
+  "domaine": "Géopolitique, Sécurité & Défense",
+  "titre": "Le pacte de La Mecque rebat les cartes de l'Asie du Sud",
+  "accroche": "Le Pakistan, l'Arabie saoudite et la Turquie ont signé le 7 août un engagement de défense mutuelle. L'accord adosse la puissance financière saoudienne à l'armée pakistanaise, seule force nucléaire du monde musulman, et fragilise l'Inde.",
+  "url": "veille-n01.html#pacte-la-mecque"
+ },
+ {
+  "id": "n01-breves",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 17,
+  "domaine": "Brèves",
+  "titre": "Droit &amp; Argent",
+  "accroche": "",
+  "url": "veille-n01.html#breves"
+ },
+ {
+  "id": "n01-actu",
+  "numero": 1,
+  "date": "2026-08-12",
+  "ordre": 18,
+  "domaine": "Brèves",
+  "titre": "L'actu en bref",
+  "accroche": "",
+  "url": "veille-n01.html#actu"
+ },
+ {
+  "id": "n02-evo-phages",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 0,
+  "domaine": "Intelligence artificielle",
+  "titre": "Une IA a écrit des génomes de virus, et seize fonctionnent",
+  "accroche": "Des chercheurs de Stanford et de l'Arc Institute ont demandé à un modèle d'IA de composer des génomes entiers de virus tueurs de bactéries. Sur 285 tentatives synthétisées en laboratoire, seize sont opérationnelles, certaines plus efficaces que leur modèle naturel. Le débat sur la biosécurité a déma",
+  "url": "veille-n02.html#evo-phages"
+ },
+ {
+  "id": "n02-parkinson-reve",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 1,
+  "domaine": "Neurosciences",
+  "titre": "Le cerveau parkinsonien redevient normal pendant le rêve",
+  "accroche": "Des patients incapables de boutonner une chemise le jour se battent, courent et parlent normalement en dormant, quand ils vivent leurs rêves. Des enregistrements chez le primate viennent d'identifier ce qui se lève pendant le sommeil paradoxal, et ce n'est pas la dopamine.",
+  "url": "veille-n02.html#parkinson-reve"
+ },
+ {
+  "id": "n02-penser-sans-mots",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 2,
+  "domaine": "Neurosciences",
+  "titre": "Deux patients privés de langage résolvent des problèmes de logique",
+  "accroche": "Le langage sert-il à raisonner ou seulement à raconter ce qu'on a raisonné ? Une équipe du MIT apporte la démonstration la plus nette obtenue à ce jour, en faisant plancher sur des syllogismes des personnes ayant perdu l'usage des mots.",
+  "url": "veille-n02.html#penser-sans-mots"
+ },
+ {
+  "id": "n02-alzheimer-genes-enquete",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 3,
+  "domaine": "Médecine",
+  "titre": "Alzheimer : une enquête met en doute les gènes protecteurs",
+  "accroche": "Deux mutations découvertes dans une famille colombienne avaient ouvert une piste thérapeutique entière : imiter ce qui protège certaines personnes du déclin. Une enquête de la revue _Science_ signale des images dupliquées dans les articles qui fondent le mécanisme.",
+  "url": "veille-n02.html#alzheimer-genes-enquete"
+ },
+ {
+  "id": "n02-probiotiques-glucose",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 4,
+  "domaine": "Médecine",
+  "titre": "Des bactéries qui dosent elles-mêmes le traitement du diabète",
+  "accroche": "Une équipe a doté un probiotique d'un circuit génétique qui détecte le sucre sanguin et déclenche la production d'un traitement seulement quand il monte. Testé chez la souris et chez le singe.",
+  "url": "veille-n02.html#probiotiques-glucose"
+ },
+ {
+  "id": "n02-supporters-synchronie",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 5,
+  "domaine": "Psychologie & comportement",
+  "titre": "Au stade, les spectateurs synchronisent leurs cœurs",
+  "accroche": "Soixante spectateurs équipés de capteurs cardiaques et prélevés à la salive pendant deux matchs de basket universitaire. Les rythmes cardiaques s'alignent entre voisins, l'ocytocine monte, le cortisol descend.",
+  "url": "veille-n02.html#supporters-synchronie"
+ },
+ {
+  "id": "n02-filigrane-claude",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 6,
+  "domaine": "Intelligence artificielle",
+  "titre": "Claude signe désormais tout ce qu'il touche",
+  "accroche": "Depuis le 2 août, les textes produits par les nouveaux modèles d'Anthropic portent une marque statistique invisible. Elle survit au copier-coller, disparaît à la traduction, et ne dit pas qui a écrit : seulement qu'une machine est passée par là.",
+  "url": "veille-n02.html#filigrane-claude"
+ },
+ {
+  "id": "n02-guerre-donnees",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 7,
+  "domaine": "Intelligence artificielle",
+  "titre": "Une police de caractères qui empoisonne les robots",
+  "accroche": "Pendant qu'on marque les textes produits par les machines, une autre bataille se joue sur ce qui les nourrit : une typographie qui sert du charabia aux aspirateurs de données, des livres rares achetés puis détruits, et des millions d'heures de vidéo versées au corpus par défaut.",
+  "url": "veille-n02.html#guerre-donnees"
+ },
+ {
+  "id": "n02-triton-capture",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 8,
+  "domaine": "Espace & Physique",
+  "titre": "Les petites lunes de Neptune sont les débris d'un carnage",
+  "accroche": "Le télescope Webb a trouvé de l'argile sur deux satellites minuscules de Neptune et dans ses anneaux, mais pas de glace d'eau. C'est exactement la signature qu'on attendrait si le système avait été détruit puis reconstruit.",
+  "url": "veille-n02.html#triton-capture"
+ },
+ {
+  "id": "n02-diamant-fusion",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 9,
+  "domaine": "Espace & Physique",
+  "titre": "Faire fondre du diamant à un térapascal",
+  "accroche": "Une équipe de Livermore a comprimé du diamant à trois fois la pression du noyau terrestre et l'a regardé fondre aux rayons X. Le résultat réconcilie vingt ans de désaccord entre expériences et simulations, et suggère un moyen de tripler le rendement de la fusion inertielle.",
+  "url": "veille-n02.html#diamant-fusion"
+ },
+ {
+  "id": "n02-saber-scenariste-ia",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 10,
+  "domaine": "Culture & industries créatives",
+  "titre": "La scénariste, le patron et la définition du mot remplacer",
+  "accroche": "Une ancienne scénariste principale accuse le studio Saber de l'avoir écartée pour confier la suite à ChatGPT. Le studio dément, son patron répond par une pique publique, et la déclaration d'usage d'IA sur Steam est corrigée trois jours plus tard.",
+  "url": "veille-n02.html#saber-scenariste-ia"
+ },
+ {
+  "id": "n02-vibe-coding-plugins",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 11,
+  "domaine": "Post-prod & Musique",
+  "titre": "Le vibe coding débarque dans les plugins audio",
+  "accroche": "Des développeurs racontent comment ils sortent en deux jours ce qui prenait un an, et comment un débutant complet peut désormais publier son premier plugin. Le goulot d'étranglement s'est déplacé : il n'est plus de savoir coder, il est de savoir trier.",
+  "url": "veille-n02.html#vibe-coding-plugins"
+ },
+ {
+  "id": "n02-otophon",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 12,
+  "domaine": "Post-prod & Musique",
+  "titre": "Un plugin qui joue des sons que votre oreille fabrique",
+  "accroche": "otophon envoie deux fréquences ; c'est la cochlée de l'auditeur qui en produit une troisième. Le son existe, il s'entend distinctement, et il n'est pas dans le signal.",
+  "url": "veille-n02.html#otophon"
+ },
+ {
+  "id": "n02-drones-dessalement",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 13,
+  "domaine": "Géopolitique, Sécurité & Défense",
+  "titre": "Des drones à 60 000 dollars contre l'eau potable du Golfe",
+  "accroche": "Depuis mars, les usines de dessalement du Golfe sont visées, touchées ou frôlées, de part et d'autre. Ces installations n'ont ni doublure, ni stock, ni délai de réparation compatible avec la soif d'une population.",
+  "url": "veille-n02.html#drones-dessalement"
+ },
+ {
+  "id": "n02-ocean-record",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 14,
+  "domaine": "Climat",
+  "titre": "L'océan bat son record, et le puits de carbone faiblit",
+  "accroche": "La température de surface des océans a dépassé cet été tous les relevés connus. Le problème n'est pas le thermomètre : c'est qu'une mer plus chaude absorbe moins de CO2, donc renvoie une part croissante de nos émissions dans l'atmosphère.",
+  "url": "veille-n02.html#ocean-record"
+ },
+ {
+  "id": "n02-douanes-incidence",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 15,
+  "domaine": "Économie",
+  "titre": "Droits de douane : les exportateurs en ont payé la moitié",
+  "accroche": "Une étude sur le choc tarifaire américain de 2025 montre que les fournisseurs étrangers ont absorbé 40 à 50 % de la hausse en baissant leurs prix. La répartition n'a rien d'uniforme : elle suit le pouvoir de marché.",
+  "url": "veille-n02.html#douanes-incidence"
+ },
+ {
+  "id": "n02-penurie-memoire",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 16,
+  "domaine": "Économie",
+  "titre": "La mémoire est devenue le poste le plus cher d'un téléphone",
+  "accroche": "Les puces mémoire représentent désormais 34 % du coût des composants d'un iPhone haut de gamme, contre 10 % il y a un an. La cause est ailleurs : les centres de données d'IA ont préempté la production mondiale.",
+  "url": "veille-n02.html#penurie-memoire"
+ },
+ {
+  "id": "n02-crues-1342",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 17,
+  "domaine": "Histoire",
+  "titre": "La crue du millénaire n'était pas une crue, mais seize",
+  "accroche": "L'inondation de la Sainte-Marie-Madeleine, en juillet 1342, est restée comme la plus grande catastrophe hydrologique de l'Europe médiévale. Une reconstitution publiée dans _Nature_ montre qu'elle appartenait à une série de seize crues majeures en moins de deux ans.",
+  "url": "veille-n02.html#crues-1342"
+ },
+ {
+  "id": "n02-filrouge",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 18,
+  "domaine": "Fil rouge",
+  "titre": "Ce que 1342 et le Golfe ont en commun",
+  "accroche": "",
+  "url": "veille-n02.html#filrouge"
+ },
+ {
+  "id": "n02-breves",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 19,
+  "domaine": "Brèves",
+  "titre": "Droit &amp; Argent",
+  "accroche": "",
+  "url": "veille-n02.html#breves"
+ },
+ {
+  "id": "n02-actu",
+  "numero": 2,
+  "date": "2026-08-16",
+  "ordre": 20,
+  "domaine": "Brèves",
+  "titre": "L'actu en bref",
+  "accroche": "",
+  "url": "veille-n02.html#actu"
  }
 ]

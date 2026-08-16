@@ -91,7 +91,6 @@ body {
   background: var(--encre);
   display: inline-block;
   padding: 3px 9px;
-  margin-bottom: 12px;
 }
 .deck-carte h2 { font-size: 24px; font-weight: 900; line-height: 1.18; margin-bottom: 10px; }
 .deck-carte .accroche {
@@ -116,10 +115,36 @@ body {
 .indice.droite { left: 14px; color: var(--accent); border: 2px solid var(--accent); }
 #progression {
   font-family: var(--sans);
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--gris);
   text-align: center;
   margin: 12px 0 10px 0;
+}
+#progression strong { color: var(--accent-sombre); }
+#progression .sur { opacity: 0.6; }
+.verrou {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 8px;
+  background: var(--accent-pale);
+  color: var(--accent-sombre);
+  font-weight: 700;
+  font-size: 11px;
+}
+.entete-deck {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.date-carte {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gris);
 }
 #tri .actions { display: flex; flex-direction: column; gap: 8px; }
 .btn {
@@ -425,6 +450,13 @@ const votes = () => JSON.parse(localStorage.getItem(LS_VOTE) || "{}");
 const passes = () => JSON.parse(localStorage.getItem(LS_PASS) || "{}");
 const save = (k, o) => localStorage.setItem(k, JSON.stringify(o));
 const jour = () => new Date().toISOString().slice(0, 10);
+const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet",
+              "août", "septembre", "octobre", "novembre", "décembre"];
+function dateFr(iso) {
+  if (!iso) return "";
+  const [a, m, j] = iso.split("-").map(Number);
+  return `${j}${j === 1 ? "er" : ""} ${MOIS[m - 1]} ${a}`;
+}
 /* état « officiel » (synchronisé via Claude) fusionné avec l'état local */
 const estLu = a => (a.id in lus()) || a.lu === true;
 const estPasse = a => (a.id in passes()) || a.passe === true;
@@ -432,7 +464,23 @@ const archive = a => estLu(a) || estPasse(a);
 const voteDe = a => (votes()[a.id] !== undefined) ? votes()[a.id] : (a.vote || 0);
 const restants = () => articles.filter(a => !archive(a));
 
-function courant() { return restants()[0] || null; }
+/* lecture chronologique : on ne sert que le plus ancien numéro non terminé ;
+   les suivants restent verrouillés tant qu'il reste un article à trier. */
+function numeroCourant() {
+  const r = restants();
+  return r.length ? Math.min(...r.map(a => a.numero)) : null;
+}
+function restantsCourants() {
+  const n = numeroCourant();
+  return n === null ? [] : restants().filter(a => a.numero === n);
+}
+function courant() { return restantsCourants()[0] || null; }
+function numerosVerrouilles() {
+  const n = numeroCourant();
+  if (n === null) return [];
+  const suivants = [...new Set(articles.filter(a => a.numero > n).map(a => a.numero))];
+  return suivants.sort((x, y) => x - y);
+}
 
 function majCompteurs() {
   document.getElementById("c-tri").textContent = "(" + restants().length + ")";
@@ -453,14 +501,23 @@ function rendreTri() {
     return;
   }
   actions.style.visibility = "visible";
+  const totalNum = articles.filter(x => x.numero === a.numero).length;
+  const resteNum = restantsCourants().length;
   zone.innerHTML = `<div class="deck-carte" id="deck" role="button" tabindex="0"
       onclick="lireCourant()" onkeydown="if(event.key==='Enter')lireCourant()">
-    <span class="domaine">n°${a.numero} · ${a.domaine}</span>
+    <div class="entete-deck">
+      <span class="domaine">${a.domaine}</span>
+      <span class="date-carte">${dateFr(a.date)}</span>
+    </div>
     <h2>${a.titre}</h2>
     <p class="accroche">${a.accroche}</p>
   </div>`;
-  document.getElementById("progression").textContent =
-    `${restants().length} à trier · touche la carte pour lire l'article`;
+  const verrous = numerosVerrouilles();
+  const suite = verrous.length
+    ? `<span class="verrou">🔒 Numéro ${verrous[0]} après</span>` : "";
+  document.getElementById("progression").innerHTML =
+    `<strong>Numéro ${a.numero}</strong> · ${dateFr(a.date)} ·
+     ${totalNum - resteNum + 1}<span class="sur">/${totalNum}</span> ${suite}`;
 }
 
 function passerCourant() {
@@ -486,7 +543,7 @@ function ouvrirLecture(a) {
   document.getElementById("archives").style.display = "none";
   document.getElementById("lecture").style.display = "flex";
   document.getElementById("lecture-domaine").textContent =
-    "n°" + a.numero + " · " + a.domaine;
+    "n°" + a.numero + " · " + dateFr(a.date);
   majVotesLecture();
   const zone = document.getElementById("contenu");
   zone.innerHTML = '<p class="vide">Chargement…</p>';
@@ -531,20 +588,29 @@ function rendreArchives() {
     zone.innerHTML = '<p class="vide">Rien d’archivé pour l’instant.</p>';
     return;
   }
-  zone.innerHTML = items.map(a => {
+  // archives : numéro le plus récent en haut
+  const tries = [...items].sort((x, y) => y.numero - x.numero ||
+                                          (x.ordre || 0) - (y.ordre || 0));
+  let html = "", numCourant = null;
+  for (const a of tries) {
+    if (a.numero !== numCourant) {
+      numCourant = a.numero;
+      html += `<p class="groupe-titre">Numéro ${a.numero} · ${dateFr(a.date)}</p>`;
+    }
     const v = voteDe(a);
     const etat = estLu(a) ? '<span class="etat lu">✓ lu</span>'
                           : '<span class="etat passe">✗ passé</span>';
-    const voteTxt = v === 1 ? " · 👍" : v === -1 ? " · 👎" : "";
-    return `<div class="liste-carte">
-      <div class="entete"><span class="domaine">n°${a.numero} · ${a.domaine}</span>${etat}<span class="sans" style="font-size:11px;color:var(--gris)">${voteTxt}</span></div>
+    const voteTxt = v === 1 ? "👍" : v === -1 ? "👎" : "";
+    html += `<div class="liste-carte">
+      <div class="entete"><span class="domaine">${a.domaine}</span>${etat}<span class="sans" style="font-size:12px">${voteTxt}</span></div>
       <h3>${a.titre}</h3>
       <div class="mini">
         <button class="btn" onclick="relire('${a.id}')">Relire</button>
         <button class="btn" onclick="remettre('${a.id}')">↩︎ À trier</button>
       </div>
     </div>`;
-  }).join("");
+  }
+  zone.innerHTML = html;
 }
 function relire(id) {
   const a = articles.find(x => x.id === id);
@@ -604,7 +670,12 @@ function copierBilan() {
 
 fetch("articles.json")
   .then(r => r.json())
-  .then(data => { articles = data; rendreTri(); })
+  .then(data => {
+    // ordre de lecture garanti côté client : numéro croissant, puis ordre éditorial
+    articles = data.sort((x, y) => x.numero - y.numero ||
+                                   (x.ordre || 0) - (y.ordre || 0));
+    rendreTri();
+  })
   .catch(() => {
     document.getElementById("carte-zone").innerHTML =
       '<p class="vide">Impossible de charger le catalogue.</p>';
