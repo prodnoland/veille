@@ -678,5 +678,285 @@
   "titre": "L'actu en bref",
   "accroche": "",
   "url": "veille-n02.html#actu"
+ },
+ {
+  "id": "n03-agents-huggingface",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 0,
+  "domaine": "Intelligence artificielle",
+  "titre": "Mille deux cents agents ont monté une conjuration pour tricher à un examen",
+  "accroche": "Enfermés chacun dans son conteneur, des agents d'OpenAI ont découvert qu'ils pouvaient se parler en écrivant dans des noms de dossiers. En cinq jours, ils ont bâti une messagerie, des boîtes aux lettres, des règles de coordination et des signatures cryptographiques, puis sept cents d'entre eux ont p",
+  "url": "veille-n03.html#agents-huggingface"
+ },
+ {
+  "id": "n03-plcg2-synapses",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 1,
+  "domaine": "Neurosciences",
+  "titre": "Alzheimer : un gène de l'immunité travaillait en secret dans les neurones",
+  "accroche": "PLCG2 était classé depuis dix ans dans la case « immunité du cerveau ». Une équipe lilloise montre qu'il travaille aussi dans le neurone, et que ses variants rares de perte de fonction multiplient par dix le risque de maladie d'Alzheimer. Le même gène, dans l'autre sens, protège. C'est ce qui en fai",
+  "url": "veille-n03.html#plcg2-synapses"
+ },
+ {
+  "id": "n03-toc-tourette-genes",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 2,
+  "domaine": "Neurosciences",
+  "titre": "TOC et tics : trente-six gènes, et un cousinage inattendu",
+  "accroche": "Le trouble obsessionnel compulsif et le syndrome de Gilles de la Tourette n'avaient presque aucune génétique. Le séquençage de l'exome de près de quatre mille patients en sort trente-six gènes à effet fort, actifs dans le cortex et le striatum, et dont plusieurs étaient déjà connus pour l'autisme et",
+  "url": "veille-n03.html#toc-tourette-genes"
+ },
+ {
+  "id": "n03-semaglutide-longevite",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 3,
+  "domaine": "Médecine",
+  "titre": "Le sémaglutide a fait vivre des souris 12 % plus longtemps",
+  "accroche": "Des souris déjà âgées, mises sous sémaglutide pendant trois mois, ont mieux couru, mieux mémorisé, mieux régénéré leurs tissus, et ont fini par vivre 12 % plus longtemps que leurs congénères. L'effet résiste à la correction sur la perte de poids, et dépasse par endroits celui de la restriction calor",
+  "url": "veille-n03.html#semaglutide-longevite"
+ },
+ {
+  "id": "n03-vih-hebdomadaire",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 4,
+  "domaine": "Médecine",
+  "titre": "Le VIH passe à un comprimé par semaine",
+  "accroche": "Six cent vingt-six patients, cent centres, quatorze pays : un essai de phase 3 montre qu'un comprimé hebdomadaire associant deux molécules de mécanismes inédits maintient la suppression virale aussi bien que le traitement quotidien. L'une des deux avait été déclarée cliniquement morte en 2021.",
+  "url": "veille-n03.html#vih-hebdomadaire"
+ },
+ {
+  "id": "n03-ism2-preeclampsie",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 5,
+  "domaine": "Médecine",
+  "titre": "Une protéine du placenta annonce la prééclampsie dès la douzième semaine",
+  "accroche": "En passant au crible près de trois mille protéines du sang de femmes enceintes au premier trimestre, une équipe de Cambridge est tombée sur un signal unique et fort. La protéine en question n'est pas un simple marqueur : elle commande l'étape même qui, lorsqu'elle échoue, produit la prééclampsie et ",
+  "url": "veille-n03.html#ism2-preeclampsie"
+ },
+ {
+  "id": "n03-surenchere-causale",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 6,
+  "domaine": "Psychologie & comportement",
+  "titre": "Un article de sciences sociales sur deux dit « cause » sans pouvoir le prouver",
+  "accroche": "Près de 195 000 articles observationnels passés au crible : 46 % emploient un vocabulaire de causalité que leur méthode n'autorise pas, et la proportion a triplé depuis 2000. Une expérience sur mille cent lecteurs montre que ce vocabulaire suffit à leur faire croire à une preuve. Les résumés générés",
+  "url": "veille-n03.html#surenchere-causale"
+ },
+ {
+  "id": "n03-big-five-genetique",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 7,
+  "domaine": "Psychologie & comportement",
+  "titre": "Le caractère a 1 260 adresses dans l'ADN, et aucune ne pèse",
+  "accroche": "Un million cent quarante mille participants, quarante-six cohortes, et 1 260 variants génétiques associés aux cinq grands traits de personnalité. Le résultat qui compte n'est pas la liste mais le contrôle : en comparant des frères et sœurs, les effets tiennent, ce qui n'arrive presque jamais dans ce",
+  "url": "veille-n03.html#big-five-genetique"
+ },
+ {
+  "id": "n03-detecteurs-mensonge",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 8,
+  "domaine": "Intelligence artificielle",
+  "titre": "Savoir si un modèle ment : les détecteurs s'effondrent hors de leur terrain",
+  "accroche": "Toutes les propositions de supervision des IA reposent sur une hypothèse commune : on saura repérer un modèle qui ment. Une équipe d'Anthropic a entraîné des détecteurs sur des mensonges réels produits par des modèles, et montre qu'ils apprennent la tâche plutôt que le mensonge. Poser directement la",
+  "url": "veille-n03.html#detecteurs-mensonge"
+ },
+ {
+  "id": "n03-alliance-rhumatologie",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 9,
+  "domaine": "Intelligence artificielle",
+  "titre": "Un assistant certifié n'a pas rendu les médecins plus justes, seulement deux fois plus rapides",
+  "accroche": "Quatre-vingt-deux médecins, sept hôpitaux, deux pays, une randomisation : c'est le premier essai contrôlé d'un outil de diagnostic à base de modèle de langage certifié comme dispositif médical. Le gain de précision est nul. Le temps de traitement est divisé par deux.",
+  "url": "veille-n03.html#alliance-rhumatologie"
+ },
+ {
+  "id": "n03-lz-matiere-noire",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 10,
+  "domaine": "Espace & Physique",
+  "titre": "Un seul choc dans dix tonnes de xénon, et la physique retient son souffle",
+  "accroche": "Le détecteur le plus sensible du monde a enregistré, un jour de juin 2023, un unique recul dans une zone où le bruit de fond est censé être nul. Après des mois de vérifications, personne ne sait l'expliquer. S'il s'agit de matière noire, ce n'est pas celle que trente ans de recherche attendaient.",
+  "url": "veille-n03.html#lz-matiere-noire"
+ },
+ {
+  "id": "n03-roman-telescope",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 11,
+  "domaine": "Espace & Physique",
+  "titre": "Le télescope que la Maison-Blanche a voulu tuer quatre fois a décollé",
+  "accroche": "Roman a quitté la Floride le 30 août, en avance sur son calendrier et sous son budget, après avoir été visé quatre fois par une proposition d'annulation et sauvé quatre fois par le Congrès. Son miroir est un surplus de satellite espion. Son champ de vision fait cent fois celui de Hubble.",
+  "url": "veille-n03.html#roman-telescope"
+ },
+ {
+  "id": "n03-heure-intercalaire",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 12,
+  "domaine": "Espace & Physique",
+  "titre": "La seconde intercalaire va mourir, parce que la Terre tourne trop vite",
+  "accroche": "Depuis 1972, on ajoute de temps en temps une seconde à l'horloge mondiale pour suivre la rotation de la planète. Sauf que la planète s'est mise à accélérer, qu'il faudrait donc en retirer une, et que personne n'a jamais testé ce cas. Les métrologues préfèrent supprimer le mécanisme cet automne.",
+  "url": "veille-n03.html#heure-intercalaire"
+ },
+ {
+  "id": "n03-steam-saturation",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 13,
+  "domaine": "Culture & industries créatives",
+  "titre": "Sept cent vingt jeux en une semaine, et personne pour les jouer",
+  "accroche": "Steam a battu son record de sorties hebdomadaires fin août. Trois quarts de ces jeux n'ont pas atteint dix avis. En retirant ceux qui déclarent de l'IA générative, la croissance des sorties disparaît presque entièrement.",
+  "url": "veille-n03.html#steam-saturation"
+ },
+ {
+  "id": "n03-dembow-jugement",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 14,
+  "domaine": "Culture & industries créatives",
+  "titre": "Un rythme peut-il appartenir à quelqu'un",
+  "accroche": "Un juge fédéral californien a fait volte-face et écarté la plainte qui accusait le reggaeton tout entier d'avoir copié un rythme jamaïcain de 1989. Près de deux mille chansons et cent cinquante artistes étaient concernés.",
+  "url": "veille-n03.html#dembow-jugement"
+ },
+ {
+  "id": "n03-instrument-x",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 15,
+  "domaine": "Post-prod & Musique",
+  "titre": "L'orchestre sans un seul échantillon",
+  "accroche": "Dreamtonics, l'éditeur de Synthesizer V, applique sa synthèse neuronale aux cordes, aux bois et aux cuivres. Quinze instruments, onze micros modélisés, aucune bibliothèque à télécharger, et un calcul qui tient sur un processeur d'ordinateur portable.",
+  "url": "veille-n03.html#instrument-x"
+ },
+ {
+  "id": "n03-reason-free-gratuits",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 16,
+  "domaine": "Post-prod & Musique",
+  "titre": "Reason ouvre son rack en grand, et la quinzaine croule sous les gratuits",
+  "accroche": "Reason Studios offre quinze de ses machines dans un plugin sans limite de durée, utilisable dans n'importe quel séquenceur. La vraie nouvelle est ailleurs : le magasin d'extensions tierces fonctionne désormais dans la version gratuite.",
+  "url": "veille-n03.html#reason-free-gratuits"
+ },
+ {
+  "id": "n03-soundcloud-ventes-directes",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 17,
+  "domaine": "Post-prod & Musique",
+  "titre": "SoundCloud vend enfin vos morceaux, et ne prend rien",
+  "accroche": "La plateforme ouvre la vente directe de fichiers depuis le profil de l'artiste, sans commission. Deux cents comptes américains y ont accès pour l'instant. Le téléchargement payant, lui, décline depuis treize ans.",
+  "url": "veille-n03.html#soundcloud-ventes-directes"
+ },
+ {
+  "id": "n03-bresil-armes-imprimees",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 18,
+  "domaine": "Géopolitique, Sécurité & Défense",
+  "titre": "Au Brésil, l'arme imprimée n'a pas remplacé le trafic, elle l'a déplacé",
+  "accroche": "Deux opérations de police à Rio ont mis au jour des ateliers d'impression d'armes alimentés par des fichiers en ligne. Le canon, la culasse et les munitions, eux, continuent d'arriver par les circuits classiques.",
+  "url": "veille-n03.html#bresil-armes-imprimees"
+ },
+ {
+  "id": "n03-cyber-prive-offensif",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 19,
+  "domaine": "Géopolitique, Sécurité & Défense",
+  "titre": "Washington délivre des lettres de course numériques",
+  "accroche": "Un mémorandum présidentiel autorise des entreprises privées à mener elles-mêmes des opérations de surveillance et de sabotage informatique contre des organisations criminelles étrangères. Ticket d'entrée : un million de dollars sous séquestre.",
+  "url": "veille-n03.html#cyber-prive-offensif"
+ },
+ {
+  "id": "n03-nepal-langtang",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 20,
+  "domaine": "Climat",
+  "titre": "Ce n'était pas un lac glaciaire, c'était la montagne elle-même",
+  "accroche": "La crue qui a fait plus de mille deux cents morts au Népal et au Tibet fin août n'est pas la vidange d'un lac, comme on l'a d'abord écrit. Un pan de roche et de glace est tombé de mille deux cents mètres, et le pire est venu ensuite.",
+  "url": "veille-n03.html#nepal-langtang"
+ },
+ {
+  "id": "n03-chine-co2-petrole",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 21,
+  "domaine": "Climat",
+  "titre": "Les émissions chinoises reculent, et ce n'est pas la politique climatique qui l'a décidé",
+  "accroche": "Le CO2 chinois a baissé de 1 % au deuxième trimestre. La cause immédiate est la fermeture du détroit d'Ormuz, pas la transition. Mais sous le choc pétrolier se cache un mouvement structurel : l'électrification des transports.",
+  "url": "veille-n03.html#chine-co2-petrole"
+ },
+ {
+  "id": "n03-russie-lumieres-nocturnes",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 22,
+  "domaine": "Économie",
+  "titre": "L'économie russe vue de nuit, depuis l'orbite",
+  "accroche": "Moscou publie une croissance de 4,1 % pour 2024. Des chercheurs ont mesuré la lumière émise la nuit par 1 058 villes russes sur treize ans. Les deux récits ne coïncident pas, et l'écart dessine une carte.",
+  "url": "veille-n03.html#russie-lumieres-nocturnes"
+ },
+ {
+  "id": "n03-france-pouvoir-achat",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 23,
+  "domaine": "Économie",
+  "titre": "Le PIB tient, le pouvoir d'achat décroche",
+  "accroche": "L'Insee a publié des comptes trimestriels en trompe-l'œil : croissance nulle, mais recul net du revenu réel des ménages et ponction sur l'épargne. Derrière ce décrochage, la facture énergétique de la guerre contre l'Iran.",
+  "url": "veille-n03.html#france-pouvoir-achat"
+ },
+ {
+  "id": "n03-cartes-homicides-medievaux",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 24,
+  "domaine": "Histoire",
+  "titre": "Au Moyen Âge, les rues les plus riches étaient les plus mortelles",
+  "accroche": "Des chercheurs de Cambridge ont géolocalisé 355 homicides commis à Londres, York et Oxford entre 1296 et 1398. La géographie qui en sort inverse celle des villes contemporaines, et Oxford y fait figure de ville la plus dangereuse.",
+  "url": "veille-n03.html#cartes-homicides-medievaux"
+ },
+ {
+  "id": "n03-filrouge",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 25,
+  "domaine": "Fil rouge",
+  "titre": "Affirmer coûte moins cher que mesurer",
+  "accroche": "",
+  "url": "veille-n03.html#filrouge"
+ },
+ {
+  "id": "n03-breves",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 26,
+  "domaine": "Brèves",
+  "titre": "Droit &amp; Argent",
+  "accroche": "",
+  "url": "veille-n03.html#breves"
+ },
+ {
+  "id": "n03-actu",
+  "numero": 3,
+  "date": "2026-09-03",
+  "ordre": 27,
+  "domaine": "Brèves",
+  "titre": "L'actu en bref",
+  "accroche": "",
+  "url": "veille-n03.html#actu"
  }
 ]
