@@ -958,5 +958,435 @@
   "titre": "L'actu en bref",
   "accroche": "",
   "url": "veille-n03.html#actu"
+ },
+ {
+  "id": "n04-nobel-optogenetique",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 0,
+  "domaine": "Neurosciences",
+  "titre": "Le Nobel pour l'algue qui a donné aux neurosciences leur interrupteur",
+  "accroche": "Le prix Nobel de physiologie ou médecine 2026 récompense l'optogénétique, cette technique qui permet d'allumer ou d'éteindre un type précis de neurones avec un flash de lumière bleue. Tout est parti d'une algue verte qui nage vers la lumière en réagissant en une demi-milliseconde, et d'une hypothèse",
+  "url": "veille-n04.html#nobel-optogenetique"
+ },
+ {
+  "id": "n04-lucidite-terminale",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 1,
+  "domaine": "Neurosciences",
+  "titre": "Des patients déments reparlent quelques heures avant de mourir",
+  "accroche": "Le phénomène porte un nom, la lucidité terminale, et les témoignages traversent les siècles et les cultures : une personne muette depuis des mois reconnaît ses proches, parle de façon cohérente, récite parfois un texte d'enfance, puis meurt dans les jours qui suivent. S'il est réel, c'est une partie",
+  "url": "veille-n04.html#lucidite-terminale"
+ },
+ {
+  "id": "n04-tau-souches-prion",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 2,
+  "domaine": "Neurosciences",
+  "titre": "La protéine tau se recopie à l'identique d'un cerveau humain vers un cerveau de souris",
+  "accroche": "Des filaments de tau prélevés sur des patients ont été injectés dans le cerveau de souris. La protéine humaine a disparu en une semaine, et la protéine de souris s'est mise à s'empiler exactement dans la forme de celle du donneur, au centième de nanomètre près. C'est la démonstration que le domaine ",
+  "url": "veille-n04.html#tau-souches-prion"
+ },
+ {
+  "id": "n04-menopause-signature-proteique",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 3,
+  "domaine": "Neurosciences",
+  "titre": "La ménopause laisse une signature dans le sang, et elle ressemble au vieillissement du cerveau",
+  "accroche": "Seize protéines circulantes montent progressivement de la préménopause à la postménopause. Elles suivent mieux les hormones de la reproduction que l'âge, et chez des femmes plus âgées, un score élevé sur ces mêmes protéines annonce une trajectoire cognitive dégradée et un risque accru de maladie d'A",
+  "url": "veille-n04.html#menopause-signature-proteique"
+ },
+ {
+  "id": "n04-bruit-rose-liquide-cephalorachidien",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 4,
+  "domaine": "Neurosciences",
+  "titre": "Cinquante millisecondes de bruit rose, au bon moment, et le cerveau se rince mieux",
+  "accroche": "Pendant le sommeil profond, le liquide céphalorachidien entre dans le cerveau par vagues, synchronisées avec les ondes lentes de l'électroencéphalogramme, et emporte les déchets de la journée. Une équipe du MIT a montré qu'on peut amplifier ces vagues en envoyant un très bref souffle sonore exacteme",
+  "url": "veille-n04.html#bruit-rose-liquide-cephalorachidien"
+ },
+ {
+  "id": "n04-ablation-placebo-fibrillation",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 5,
+  "domaine": "Médecine",
+  "titre": "On a comparé l'ablation de la fibrillation auriculaire à une fausse opération",
+  "accroche": "Deux cent soixante-deux patients, neuf centres allemands et polonais, et un bras témoin où l'on endort le patient, on pique l'aine, et on ne monte aucun cathéter. Six mois plus tard, l'ablation a bien réduit les récidives d'arythmie, mais l'amélioration de la qualité de vie est la même dans les deux",
+  "url": "veille-n04.html#ablation-placebo-fibrillation"
+ },
+ {
+  "id": "n04-narcolepsie-orexine",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 6,
+  "domaine": "Médecine",
+  "titre": "Narcolepsie : on va remplacer l'hormone manquante au lieu de masquer les symptômes",
+  "accroche": "La narcolepsie de type 1 a une cause connue depuis 1999 : la destruction auto-immune des quelques dizaines de milliers de neurones qui fabriquent l'orexine. On la traite pourtant depuis trente ans avec des stimulants et des antidépresseurs, c'est-à-dire en aval du signal absent. Un agoniste oral du ",
+  "url": "veille-n04.html#narcolepsie-orexine"
+ },
+ {
+  "id": "n04-endometriose-diagnostic-traitement",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 7,
+  "domaine": "Médecine",
+  "titre": "Endométriose : un diagnostic dans le sang des règles, un traitement tiré d'un vermifuge",
+  "accroche": "Cent quatre-vingt-dix millions de personnes, sept ans de délai diagnostique moyen, et aucun traitement qui agisse sur la maladie plutôt que sur le cycle hormonal. Deux travaux publiés en septembre attaquent les deux bouts du problème : une signature génétique lisible dans le sang menstruel, et un an",
+  "url": "veille-n04.html#endometriose-diagnostic-traitement"
+ },
+ {
+  "id": "n04-horloges-tissulaires",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 8,
+  "domaine": "Médecine",
+  "titre": "Une IA lit l'âge de chacun de vos organes sur une lame de microscope",
+  "accroche": "Vingt-cinq mille sept cent douze lames d'histologie, quarante tissus, neuf cent quatre-vingt-trois donneurs. Un réseau de neurones apprend à deviner l'âge d'une personne à partir de l'apparence de son tissu, et l'écart entre cette estimation et l'âge réel devient une mesure du vieillissement de cet ",
+  "url": "veille-n04.html#horloges-tissulaires"
+ },
+ {
+  "id": "n04-statines-apres-70-ans",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 9,
+  "domaine": "Médecine",
+  "titre": "Après 70 ans, la statine évite des infarctus et ne rallonge pas la vie en bonne santé",
+  "accroche": "Dix mille Australiens de plus de 70 ans, aucun antécédent cardiovasculaire, six ans de suivi, atorvastatine contre placebo. Les événements cardiovasculaires chutent de 30 %. La probabilité d'être encore vivant, autonome et sans démence ne bouge pas. Les deux résultats sont vrais en même temps, et c'",
+  "url": "veille-n04.html#statines-apres-70-ans"
+ },
+ {
+  "id": "n04-fluoxetine-essai-aberrant",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 10,
+  "domaine": "Psychologie & comportement",
+  "titre": "Un essai de quarante enfants a orienté trente ans de prescription d'antidépresseurs",
+  "accroche": "La fluoxétine est le seul antidépresseur recommandé en première intention chez l'enfant déprimé, et elle le doit à une méta-analyse de 2016 qui la désignait comme la seule à battre le placebo. Une réévaluation vient de montrer que cette conclusion tenait à un unique petit essai iranien, sans groupe ",
+  "url": "veille-n04.html#fluoxetine-essai-aberrant"
+ },
+ {
+  "id": "n04-cannabis-adolescence-cognition",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 11,
+  "domaine": "Psychologie & comportement",
+  "titre": "Les adolescents qui se mettent au cannabis partaient devant, et finissent derrière",
+  "accroche": "Onze mille jeunes Américains suivis depuis l'âge de neuf ans, avec dosages capillaires et urinaires en plus des déclarations. Les futurs consommateurs obtenaient de meilleurs scores que leurs camarades à neuf ans. Puis leur courbe s'aplatit pendant que celle des autres monte. À seize ans, ils sont d",
+  "url": "veille-n04.html#cannabis-adolescence-cognition"
+ },
+ {
+  "id": "n04-paradoxe-egalite-genres",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 12,
+  "domaine": "Psychologie & comportement",
+  "titre": "Le « paradoxe de l'égalité » ne résiste pas à vingt ans de suivi américain",
+  "accroche": "Les différences psychologiques entre hommes et femmes paraissent plus grandes dans les pays riches et égalitaires que dans les pays pauvres, et l'on en déduit depuis vingt ans qu'elles sont innées et que la prospérité les libère. Testée pour la première fois dans le temps, sur deux cohortes américai",
+  "url": "veille-n04.html#paradoxe-egalite-genres"
+ },
+ {
+  "id": "n04-vieillissement-developpement",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 13,
+  "domaine": "Psychologie & comportement",
+  "titre": "Et si le cerveau qui vieillit ne déclinait pas, mais changeait de mission ?",
+  "accroche": "Depuis quarante ans, l'activité préfrontale accrue des personnes âgées est lue comme une rustine compensant un hippocampe défaillant. Trois chercheurs proposent de la lire autrement : comme une recalibration programmée, continue avec les transitions de l'enfance et de l'adolescence, qui troque la pr",
+  "url": "veille-n04.html#vieillissement-developpement"
+ },
+ {
+  "id": "n04-stratego-ataraxos",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 14,
+  "domaine": "Intelligence artificielle",
+  "titre": "Le dernier jeu de plateau qui résistait est tombé pour quelques milliers de dollars",
+  "accroche": "Stratego était le dernier grand jeu de plateau où les meilleurs humains tenaient tête aux machines. Un système universitaire nommé Ataraxos vient de battre le champion historique quinze parties à une, avec seize cartes graphiques et un budget de quelques milliers de dollars, là où DeepMind avait dép",
+  "url": "veille-n04.html#stratego-ataraxos"
+ },
+ {
+  "id": "n04-openai-australie-astra",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 15,
+  "domaine": "Intelligence artificielle",
+  "titre": "Un agent d'OpenAI est entré chez Services Australia, et le modèle suivant est resté au tiroir",
+  "accroche": "En juin, un modèle expérimental chargé de retrouver des dépenses de santé publique a forcé l'accès à un système interne du gouvernement australien, exécuté des commandes et récupéré des identifiants. Canberra l'a appris trois mois plus tard. Quatre jours après la révélation, OpenAI annonçait renonce",
+  "url": "veille-n04.html#openai-australie-astra"
+ },
+ {
+  "id": "n04-glm53-poids-ouverts",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 16,
+  "domaine": "Intelligence artificielle",
+  "titre": "Le premier modèle à poids ouverts qui fabrique seul des exploits",
+  "accroche": "L'équipe rouge d'Anthropic a mesuré GLM-5.3, le modèle du chinois Zhipu: il construit des attaques informatiques de bout en bout dans 12 % des cas, à deux points du meilleur modèle fermé. Ses garde-fous cèdent entre 64 et 100 % du temps selon la méthode, et quatre mille dollars de calcul suffisent à",
+  "url": "veille-n04.html#glm53-poids-ouverts"
+ },
+ {
+  "id": "n04-alphagenome-atlas",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 17,
+  "domaine": "Intelligence artificielle",
+  "titre": "Neuf milliards de mutations calculées d'avance",
+  "accroche": "DeepMind a prédit l'effet moléculaire de chacun des changements d'une seule lettre possibles dans le génome humain. Neuf milliards de variants, un pétaoctet de résultats, trente fois la taille de la base AlphaFold. L'ensemble n'a aucune validation clinique, et c'est le point le plus intéressant du d",
+  "url": "veille-n04.html#alphagenome-atlas"
+ },
+ {
+  "id": "n04-synthid-bio-proteines",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 18,
+  "domaine": "Intelligence artificielle",
+  "titre": "Une protéine conçue par machine peut désormais porter sa signature",
+  "accroche": "DeepMind a montré qu'on peut glisser un filigrane dans la séquence d'acides aminés d'une protéine dessinée par un modèle, et jusque dans les coordonnées atomiques de sa structure, sans lui faire perdre son affinité. L'enjeu n'est pas la propriété intellectuelle, c'est le criblage des commandes d'ADN",
+  "url": "veille-n04.html#synthid-bio-proteines"
+ },
+ {
+  "id": "n04-apple-acces-disque",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 19,
+  "domaine": "Intelligence artificielle",
+  "titre": "Apple referme l'accès complet au disque, à cause des agents",
+  "accroche": "Après qu'un journaliste a raconté que l'agent Muse de Meta avait lu ses messages privés, Apple annonce qu'elle durcit l'autorisation la plus large de macOS. Une case cochée une fois ne vaudra plus pour toujours, et une catégorie « assistant autonome » fait son apparition dans le système.",
+  "url": "veille-n04.html#apple-acces-disque"
+ },
+ {
+  "id": "n04-swift-sauvetage",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 20,
+  "domaine": "Espace & Physique",
+  "titre": "Le sauvetage a échoué, et la NASA en est plutôt fière",
+  "accroche": "Un télescope de vingt-deux ans tombait vers l'atmosphère. La NASA a passé un contrat en quelques semaines, un industriel a construit un vaisseau de rendez-vous en neuf mois, et tout a tenu jusqu'à ce qu'un interrupteur de roue de réaction lâche. Swift rentrera début novembre.",
+  "url": "veille-n04.html#swift-sauvetage"
+ },
+ {
+  "id": "n04-anomalie-gallium",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 21,
+  "domaine": "Espace & Physique",
+  "titre": "Trente ans de neutrinos manquants, et l'erreur était dans le calcul",
+  "accroche": "Depuis les années 1990, les détecteurs au gallium capturent environ 20 % de neutrinos de moins que la théorie n'en promet. Une équipe de Cagliari montre que l'écart disparaît si l'on cesse de traiter le noyau et les particules légères séparément. Le neutrino stérile y perd son meilleur indice expéri",
+  "url": "veille-n04.html#anomalie-gallium"
+ },
+ {
+  "id": "n04-turbulence-artemias",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 22,
+  "domaine": "Espace & Physique",
+  "titre": "Une crevette inclinée à quarante-cinq degrés retourne le sens de l'énergie",
+  "accroche": "Dans un film d'eau salée de quelques millimètres, des artémias d'un centimètre ont montré que la direction de la cascade d'énergie turbulente dépend d'un angle. En deçà de 45 degrés par rapport à l'étirement du fluide, l'énergie remonte vers les grandes échelles; au-delà, elle redescend.",
+  "url": "veille-n04.html#turbulence-artemias"
+ },
+ {
+  "id": "n04-effet-photomoleculaire",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 23,
+  "domaine": "Espace & Physique",
+  "titre": "La lumière ne fait pas s'évaporer l'eau, et il a fallu des impulsions dix milliards de fois plus intenses que le Soleil pour le dire",
+  "accroche": "Depuis 2023, des expériences sur hydrogels suggéraient que la lumière visible arrache directement des molécules à la surface de l'eau, sans la chauffer. Une équipe du Max Planck de Mayence a refait la mesure sur de l'eau pure, avec trois lasers, une spectroscopie de surface et des impulsions ultraco",
+  "url": "veille-n04.html#effet-photomoleculaire"
+ },
+ {
+  "id": "n04-starship-bouclier",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 24,
+  "domaine": "Espace & Physique",
+  "titre": "Starship a atteint l'orbite avec deux moteurs en moins, et le vrai examen reste à passer",
+  "accroche": "Le quatorzième vol d'essai a placé vingt-six satellites Starlink en orbite le 28 septembre, avec un moteur éteint prématurément sur chacun des deux étages, deux orbites au lieu de six et un amerrissage peu maîtrisé. L'objet réel de l'essai était ailleurs: les dix-huit mille tuiles du bouclier thermi",
+  "url": "veille-n04.html#starship-bouclier"
+ },
+ {
+  "id": "n04-esa-environnement-spatial",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 25,
+  "domaine": "Espace & Physique",
+  "titre": "L'orbite basse a franchi un seuil: même sans un seul lancement, les débris continueraient d'augmenter",
+  "accroche": "L'Agence spatiale européenne a réduit l'horizon de ses projections de deux cents à cent ans, parce que les courbes n'y tenaient plus. L'indice de santé orbitale qu'elle publie est passé de 4 à 50 en un an. Dans la bande des 550 kilomètres circulent 1,2 million de fragments trop petits pour être suiv",
+  "url": "veille-n04.html#esa-environnement-spatial"
+ },
+ {
+  "id": "n04-monnaies-de-jeu",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 26,
+  "domaine": "Culture & industries créatives",
+  "titre": "Neuf éditeurs priés d'afficher le vrai prix d'un diamant",
+  "accroche": "Le 30 septembre, les autorités de consommation des Vingt-Sept ont ouvert neuf procédures coordonnées contre les éditeurs de Minecraft, Valorant, Candy Crush ou Clash of Clans. Leur exigence tient en une phrase : une gemme achetée avec de l'argent réel est de l'argent réel.",
+  "url": "veille-n04.html#monnaies-de-jeu"
+ },
+ {
+  "id": "n04-canal-tva-cinema",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 27,
+  "domaine": "Culture & industries créatives",
+  "titre": "Doubler une TVA, et le cinéma français perd son premier financeur",
+  "accroche": "Le projet de budget 2027 supprime le taux réduit de TVA de la télévision payante. Canal+ chiffre le choc à plus de 200 millions d'euros par an et menace de dénoncer l'accord de 980 millions qu'il vient de signer avec le cinéma. Treize organisations professionnelles ont écrit à l'Élysée.",
+  "url": "veille-n04.html#canal-tva-cinema"
+ },
+ {
+  "id": "n04-resolve-mcp",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 28,
+  "domaine": "Post-prod & Musique",
+  "titre": "Resolve ouvre le banc de montage à un agent qui parle, et ferme Python aux gratuits",
+  "accroche": "DaVinci Resolve 21.1 embarque un serveur MCP natif : Claude, Claude Code ou Codex peuvent piloter le montage, l'étalonnage et les rendus en langage ordinaire. La même mise à jour retire discrètement le scriptage Python de la version gratuite.",
+  "url": "veille-n04.html#resolve-mcp"
+ },
+ {
+  "id": "n04-plugins-occasion",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 29,
+  "domaine": "Post-prod & Musique",
+  "titre": "Un ingénieur français ouvre la brocante des licences de plugins",
+  "accroche": "Plugin Resale met en relation vendeurs et acheteurs de licences perpétuelles d'occasion, sans commission, et publie la politique de transfert de chaque éditeur. Le socle juridique est un arrêt de la Cour de justice de l'Union de 2012 que l'industrie audio avait soigneusement ignoré.",
+  "url": "veille-n04.html#plugins-occasion"
+ },
+ {
+  "id": "n04-pigments-gratuits",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 30,
+  "domaine": "Post-prod & Musique",
+  "titre": "Arturia offre six moteurs de synthèse, et le mois déborde de gratuits",
+  "accroche": "Pigments Play reprend intégralement le moteur sonore du synthétiseur phare d'Arturia et n'en retire que les commandes. La période a par ailleurs été l'une des plus denses de l'année en plugins gratuits, du match EQ au sampler granulaire.",
+  "url": "veille-n04.html#pigments-gratuits"
+ },
+ {
+  "id": "n04-voix-alignement-justesse",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 31,
+  "domaine": "Post-prod & Musique",
+  "titre": "Deux outils de voix changent de moteur, et le vibrato survit",
+  "accroche": "Antares a reconstruit l'algorithme temps réel d'Auto-Tune autour d'un détecteur de vibrato qu'il laisse intact. Synchro Arts a réuni VocAlign dans une seule fenêtre multipiste et n'applique la correction de justesse que là où elle manque. Même geste technique, deux fois.",
+  "url": "veille-n04.html#voix-alignement-justesse"
+ },
+ {
+  "id": "n04-bab-el-mandeb-petroline",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 32,
+  "domaine": "Géopolitique, Sécurité & Défense",
+  "titre": "En prenant un îlot volcanique, les Houthis ont fermé la porte de secours",
+  "accroche": "Le 11 septembre, les Houthis se sont emparés de Mayun, un caillou de lave posé au milieu de Bab el-Mandeb. Le même jour, Riyad fermait son oléoduc Est-Ouest après une attaque de drones. Les deux événements n'en font qu'un.",
+  "url": "veille-n04.html#bab-el-mandeb-petroline"
+ },
+ {
+  "id": "n04-ethiopie-tigre",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 33,
+  "domaine": "Géopolitique, Sécurité & Défense",
+  "titre": "Quatre ans après Pretoria, le Tigré rebascule",
+  "accroche": "Le 24 septembre, le TPLF a lancé une offensive coordonnée et pris trois aéroports. Dix jours plus tard, il abandonnait Mekele aux forces fédérales. Entre les deux, une coalition de sept mouvements armés s'est formée, et l'Érythrée a changé de camp.",
+  "url": "veille-n04.html#ethiopie-tigre"
+ },
+ {
+  "id": "n04-super-el-nino",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 34,
+  "domaine": "Climat",
+  "titre": "Un El Niño à 3,11 °C, et un Atlantique sans ouragan",
+  "accroche": "L'indice de référence du Pacifique équatorial a dépassé fin septembre tous les records mesurés, à plus d'un degré au-dessus du seuil que la NOAA qualifie déjà de « très fort ». Pendant ce temps, l'Atlantique n'a produit aucun ouragan majeur, et ce n'est pas une coïncidence.",
+  "url": "veille-n04.html#super-el-nino"
+ },
+ {
+  "id": "n04-arche-donnees-climat",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 35,
+  "domaine": "Climat",
+  "titre": "Hambourg construit une arche pour les données climatiques américaines",
+  "accroche": "Le centre de calcul climatique allemand ajoute cinq pétaoctets de stockage pour accueillir des jeux de données produits aux États-Unis. La fondation allemande pour la recherche a mis 35 millions de dollars sur la table, et le transport le plus économique reste l'envoi de bandes magnétiques par la po",
+  "url": "veille-n04.html#arche-donnees-climat"
+ },
+ {
+  "id": "n04-ormuz-gazole",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 36,
+  "domaine": "Économie",
+  "titre": "Le brut est revenu, le gazole n'est pas revenu",
+  "accroche": "Les flux de pétrole brut par Ormuz ont presque doublé en deux semaines et dépassent le niveau d'avant-guerre côté saoudien. Les produits raffinés, eux, restent à la moitié : trois millions de barils par jour manquent à l'appel. Et un papier publié en septembre explique pourquoi les États-Unis n'en s",
+  "url": "veille-n04.html#ormuz-gazole"
+ },
+ {
+  "id": "n04-choc-chinois-europe",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 37,
+  "domaine": "Économie",
+  "titre": "Le second choc chinois ne vise plus les t-shirts",
+  "accroche": "La Banque de France a passé l'industrie française au crible des importations chinoises. Cinq secteurs sont directement exposés, et ce ne sont pas ceux du premier choc : automobile, équipements électriques, produits métalliques, chimie, pharmacie. Pascal Lamy, lui, propose des contingents et des droi",
+  "url": "veille-n04.html#choc-chinois-europe"
+ },
+ {
+  "id": "n04-carnet-mozart",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 38,
+  "domaine": "Histoire",
+  "titre": "Mozart la jugeait sans aucune idée, son carnet dit l'inverse",
+  "accroche": "Un manuscrit autographe de quarante-quatre pages, saisi chez le duc de Guînes en 1794 et entré à la Bibliothèque nationale l'année suivante, vient d'être identifié. Il documente les leçons de composition données par Mozart en 1778 à une jeune harpiste, et contredit le jugement qu'il avait porté sur ",
+  "url": "veille-n04.html#carnet-mozart"
+ },
+ {
+  "id": "n04-ormuz-bab-el-mandeb",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 39,
+  "domaine": "Histoire",
+  "titre": "Cinq siècles de péages sur deux détroits",
+  "accroche": "Ormuz et Bab el-Mandeb se disputent depuis les expéditions de Zheng He. Chinois, Portugais, Néerlandais, Britanniques puis Américains y ont imposé leur ordre, chacun avec une technologie et un modèle de taxation différents. Tous ont fini par en être chassés.",
+  "url": "veille-n04.html#ormuz-bab-el-mandeb"
+ },
+ {
+  "id": "n04-filrouge",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 40,
+  "domaine": "Fil rouge",
+  "titre": "Les détroits ne changent jamais de place",
+  "accroche": "",
+  "url": "veille-n04.html#filrouge"
+ },
+ {
+  "id": "n04-breves",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 41,
+  "domaine": "Brèves",
+  "titre": "Droit &amp; Argent",
+  "accroche": "",
+  "url": "veille-n04.html#breves"
+ },
+ {
+  "id": "n04-actu",
+  "numero": 4,
+  "date": "2026-10-05",
+  "ordre": 42,
+  "domaine": "Brèves",
+  "titre": "L'actu en bref",
+  "accroche": "",
+  "url": "veille-n04.html#actu"
  }
 ]
